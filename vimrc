@@ -1,7 +1,7 @@
-set nocompatible 
+set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
+	set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -23,5 +23,24 @@ set cursorline
 set visualbell
 set incsearch
 set hlsearch
+set listchars=tab:▸\ ,eol:¬
+set list
 
 colorscheme evening
+
+"
+"http://vimcasts.org/episodes/tidying-whitespace
+"
+function! Preserve(command)
+	" Preparation: save last search, and cursor position.
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	" Do the business:
+	execute a:command
+	" Clean up: restore previous search history, and cursor position
+	let @/=_s
+call cursor(l, c)
+	endfunction
+
+autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
