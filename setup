@@ -1,0 +1,8 @@
+#!/bin/sh
+
+SYMLINKS="vimrc gvimrc"
+
+for symlink in $SYMLINKS; do
+	echo "Creating symlink to ~/.$symlink"
+	ln -sf $PWD/$symlink ~/.$symlink	
+done
