@@ -1,6 +1,6 @@
 #!/bin/sh
 
-SYMLINKS="vimrc gvimrc"
+SYMLINKS="vimrc gvimrc gitconfig"
 
 for symlink in $SYMLINKS; do
 	echo "Creating symlink to ~/.$symlink"
