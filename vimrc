@@ -9,7 +9,7 @@ Bundle 'The-NERD-tree'
 Bundle 'snipMate'
 Bundle 'mako.vim'
 Bundle 'pyflakes.vim'
-Bundle 'nestor-salceda/dotfiles', {'rtp':'vim/'}
+Bundle 'nestor-salceda/dotfiles', {'rtp': 'vim/'}
 
 filetype plugin on
 
