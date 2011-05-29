@@ -44,7 +44,7 @@ function! Preserve(command)
 	execute a:command
 	" Clean up: restore previous search history, and cursor position
 	let @/=_s
-call cursor(l, c)
-	endfunction
+	call cursor(l, c)
+endfunction
 
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
