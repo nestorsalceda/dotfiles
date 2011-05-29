@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-	set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -27,6 +27,10 @@ set listchars=tab:▸\ ,eol:¬
 set list
 
 colorscheme evening
+
+highlight NonText guifg=grey70 guibg=grey20
+highlight SpecialKey guifg=grey70 guibg=grey20
+highlight LineNr guibg=grey40
 
 "
 "http://vimcasts.org/episodes/tidying-whitespace
