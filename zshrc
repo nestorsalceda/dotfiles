@@ -42,6 +42,9 @@ else
     export LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=41;37;01:ex=01;32:*.bak=01;30:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jpg=01;35:*.png=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.png=01;35:*.mpg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:"
 fi
 
+export WORKON_HOME=~/Projects/environments
+source /etc/bash_completion.d/virtualenvwrapper
+
 #===========================================================
 # OPTIONS!
 #===========================================================
@@ -61,7 +64,7 @@ setopt autocd
 setopt autopushd
 #setopt cdable_vars # forces that lengthy userdir completion
 setopt autonamedirs
-setopt pushd_ignoredups 
+setopt pushd_ignoredups
 
 setopt nobgnice nonotify
 setopt localoptions localtraps
@@ -111,8 +114,8 @@ setopt completeinword
 if [[ -e ~/.ssh/known_hosts ]]; then
     # Use .ssh/known_hosts for hostnames.
     hosts=(${${${(f)"$(<$HOME/.ssh/known_hosts)"}%%\ *}%%,*})
-    zstyle ':completion:*:hosts' hosts $hosts 
-fi 
+    zstyle ':completion:*:hosts' hosts $hosts
+fi
 
 _cdd() {
     _files -W /usr/share/doc -/
@@ -313,7 +316,7 @@ setup_prompt () {
     PS1="${(j::)ps1}"
 #   RPS1="${my_tty} ${my_time}"
     RPS1="${my_time}"
-    
+
     # chpwd
 }
 
