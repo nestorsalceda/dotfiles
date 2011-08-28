@@ -18,8 +18,7 @@ install_or_upgrade_vundle() {
 		popd
 	fi
 
-	#TODO: Upgrade the plugins and exit when finishes
-	#vim -c BundleInstall!
+	vim -c "BundleInstall!" -c ":q!" -c ":q!"
 }
 
 install_or_upgrade_oh_my_zsh() {
