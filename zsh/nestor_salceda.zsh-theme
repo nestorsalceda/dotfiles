@@ -24,18 +24,20 @@ function get_background_jobs {
 }
 
 function format_background_jobs {
-    local background_jobs=$(get_background_jobs)
-    if [[ -n $background_jobs ]]; then
-        echo "%{$fg_bold[green]%}$background_jobs %{$reset_color%}"
-    fi
+    [ $(get_background_jobs) ] && echo "%{$fg_bold[green]%}$(get_background_jobs) %{$reset_color%}"
+}
+
+function format_virtualenv_info {
+    [ $(virtualenv_info) ] && echo "%{$fg_bold[white]%}$(virtualenv_info) %{$reset_color%}"
 }
 
 local return_code="%(?..%{$fg_bold[red]%}%? %{$reset_color%})"
 local background_jobs='$(format_background_jobs)'
+local virtualenv_info='$(format_virtualenv_info)'
 local user_host="%{$fg_bold[blue]%}%n@%m%{$reset_color%}"
 local current_dir='%{$fg_bold[white]%}%~%{$reset_color%}'
 
-PROMPT="${return_code}${background_jobs}${user_host}:${current_dir}
+PROMPT="${return_code}${background_jobs}${virtualenv_info}${user_host}:${current_dir}
 %{$fg_bold[white]%}»%{$reset_color%} "
 
 RPROMPT='$vcs_info_msg_0_'

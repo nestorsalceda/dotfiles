@@ -32,6 +32,7 @@ install_or_upgrade_oh_my_zsh() {
 	fi
 	ln -sf $PWD/zsh/zshrc ~/.zshrc
 	ln -sf $PWD/zsh/nestor_salceda.zsh-theme ~/.oh-my-zsh/themes/nestor_salceda.zsh-theme
+	ln -sf $PWD/zsh/virtualenvwrapper.zsh ~/.oh-my-zsh/custom/virtualenvwrapper.zsh
 }
 
 create_symlinks
