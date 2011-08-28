@@ -1,13 +1,40 @@
 #!/bin/sh
 
-SYMLINKS="vimrc gvimrc gitconfig zshrc"
-for symlink in $SYMLINKS; do
-	echo "Creating symlink to ~/.$symlink"
-	ln -sf $PWD/$symlink ~/.$symlink
-done
+create_symlinks() {
+	SYMLINKS="vimrc gvimrc gitconfig"
+	for symlink in $SYMLINKS; do
+		echo "Creating symlink to ~/.$symlink"
+		ln -sf $PWD/$symlink ~/.$symlink
+	done
+}
 
-VUNDLE_DIR=~/.vim/bundle/vundle
-if test ! -d $VUNDLE_DIR
-then
-	git clone http://github.com/gmarik/vundle.git $VUNDLE_DIR
-fi
+install_or_upgrade_vundle() {
+	VUNDLE_DIR=~/.vim/bundle/vundle
+	if [[ ! -d $VUNDLE_DIR ]]; then
+		git clone http://github.com/gmarik/vundle.git $VUNDLE_DIR
+	else
+		pushd $VUNDLE_DIR
+		git pull
+		popd
+	fi
+
+	#TODO: Upgrade the plugins and exit when finishes
+	#vim -c BundleInstall!
+}
+
+install_or_upgrade_oh_my_zsh() {
+	OH_MY_ZSH_DIR=~/.oh-my-zsh
+	if [[ ! -d $OH_MY_ZSH_DIR ]]; then
+		git clone git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH_DIR
+	else
+		pushd $OH_MY_ZSH_DIR
+		git pull
+		popd
+	fi
+	ln -sf $PWD/zsh/zshrc ~/.zshrc
+	ln -sf $PWD/zsh/nestor_salceda.zsh-theme ~/.oh-my-zsh/themes/nestor_salceda.zsh-theme
+}
+
+create_symlinks
+install_or_upgrade_vundle
+install_or_upgrade_oh_my_zsh
