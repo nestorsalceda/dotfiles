@@ -1,19 +1,19 @@
-#!/bin/sh
+#!/bin/zsh
 
-create_symlinks() {
-	SYMLINKS="vimrc gvimrc gitconfig"
-	for symlink in $SYMLINKS; do
+function create_symlinks() {
+	symlinks=(vimrc gvimrc gitconfig)
+	for symlink in $symlinks; do
 		echo "Creating symlink to ~/.$symlink"
 		ln -sf $PWD/$symlink ~/.$symlink
 	done
 }
 
-install_or_upgrade_vundle() {
-	VUNDLE_DIR=~/.vim/bundle/vundle
-	if [[ ! -d $VUNDLE_DIR ]]; then
-		git clone http://github.com/gmarik/vundle.git $VUNDLE_DIR
+function install_or_upgrade_vundle() {
+	vundle_dir=~/.vim/bundle/vundle
+	if [[ ! -d $vundle_dir ]]; then
+		git clone http://github.com/gmarik/vundle.git $vundle_dir
 	else
-		pushd $VUNDLE_DIR
+		pushd $vundle_dir
 		git pull
 		popd
 	fi
@@ -21,12 +21,12 @@ install_or_upgrade_vundle() {
 	vim -c "BundleInstall!" -c ":q!" -c ":q!"
 }
 
-install_or_upgrade_oh_my_zsh() {
-	OH_MY_ZSH_DIR=~/.oh-my-zsh
-	if [[ ! -d $OH_MY_ZSH_DIR ]]; then
-		git clone git://github.com/robbyrussell/oh-my-zsh.git $OH_MY_ZSH_DIR
+function install_or_upgrade_oh_my_zsh() {
+	oh_my_zsh_dir=~/.oh-my-zsh
+	if [[ ! -d $oh_my_zsh_dir ]]; then
+		git clone git://github.com/robbyrussell/oh-my-zsh.git $oh_my_zsh_dir
 	else
-		pushd $OH_MY_ZSH_DIR
+		pushd $oh_my_zsh_dir
 		git pull
 		popd
 	fi
