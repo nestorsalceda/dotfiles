@@ -32,3 +32,4 @@ source $ZSH/oh-my-zsh.sh
 
 zstyle ":vcs_info:*" enabled git hg
 cdpath=(. ~ ..)
+export GREP_OPTIONS="$GREP_OPTIONS -n"
