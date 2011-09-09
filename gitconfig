@@ -1,7 +1,3 @@
-[alias]
-	ci = commit
-	st = status
-	di = diff
 [user]
 	name = Néstor Salceda
 	email = nestor.salceda@gmail.com
