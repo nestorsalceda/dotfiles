@@ -1,0 +1,22 @@
+[ui]
+username = Néstor Salceda <nestor.salceda@gmail.com>
+merge = vimdiff
+
+#TODO: Check unused
+[extensions]
+bookmarks =
+churn =
+color =
+convert =
+extdiff =
+fetch =
+graphlog =
+hgk =
+purge =
+rebase =
+record =
+share =
+transplant =
+
+[alias]
+latest = glog -l 5
