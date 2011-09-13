@@ -1,13 +1,10 @@
 [ui]
-username = nsa
+username = Néstor Salceda <nestor.salceda@gmail.com>
 merge = gvimdiff
 
 [merge-tools]¬
 gvimdiff.executable = gvim¬
 gvimdiff.args = -f -d -c "wincmd J" "$output" "$local" "$other" "$base"¬
-
-[diff]
-git = true
 
 #TODO: Check unused
 [extensions]
