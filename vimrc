@@ -11,12 +11,9 @@ Bundle 'mako.vim'
 Bundle 'pyflakes.vim'
 Bundle 'nestor-salceda/dotfiles', {'rtp': 'vim/'}
 
-filetype plugin on
-
 syntax on
 
 set number
-set smartindent
 set showmatch
 set textwidth=80
 set cursorline
@@ -25,6 +22,8 @@ set incsearch
 set hlsearch
 set listchars=tab:▸\ ,eol:¬
 set list
+
+filetype plugin indent on
 
 colorscheme evening
 
