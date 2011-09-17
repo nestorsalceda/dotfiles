@@ -47,3 +47,9 @@ function! Preserve(command)
 endfunction
 
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+
+"
+" NERDTree stuff
+"
+let NERDTreeIgnore=['\.pyc$']
+map <C-n> :NERDTreeToggle<CR>
