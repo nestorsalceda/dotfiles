@@ -9,6 +9,7 @@ Bundle 'The-NERD-tree'
 Bundle 'snipMate'
 Bundle 'mako.vim'
 Bundle 'pyflakes.vim'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'nestor-salceda/dotfiles', {'rtp': 'vim/'}
 
 syntax on
