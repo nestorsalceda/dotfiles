@@ -1,2 +1,2 @@
-set guifont=DejaVu\ Sans\ Mono\ Book\ 10
+set guifont=DejaVu\ Sans\ Mono\ Book\ 11
 set go=aegirR
