@@ -3,8 +3,8 @@ username = Néstor Salceda <nestor.salceda@gmail.com>
 merge = gvimdiff
 
 [merge-tools]¬
-gvimdiff.executable = gvim¬
-gvimdiff.args = -f -d -c "wincmd J" "$output" "$local" "$other" "$base"¬
+gvimdiff.executable = gvim
+gvimdiff.args = -f -d -c "wincmd J" "$output" "$local" "$other" "$base"
 
 #TODO: Check unused
 [extensions]
