@@ -5,3 +5,7 @@
 	editor = vim
 [color]
 	ui = always
+[merge]
+	tool = gvimdiff
+[mergetool]
+	prompt = no
