@@ -31,5 +31,5 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 zstyle ":vcs_info:*" enabled git hg
-cdpath=(. ~ ..)
+cdpath=(. .. ~)
 export GREP_OPTIONS="$GREP_OPTIONS -n"
