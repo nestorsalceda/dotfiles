@@ -52,5 +52,5 @@ autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 "
 " NERDTree stuff
 "
-let NERDTreeIgnore=['\.pyc$']
+let NERDTreeIgnore=['\.pyc$', '\.orig$']
 map <C-x> :NERDTreeToggle<CR>
