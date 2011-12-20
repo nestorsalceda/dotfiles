@@ -10,6 +10,7 @@ Bundle 'snipMate'
 Bundle 'mako.vim'
 Bundle 'pyflakes.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'nestor-salceda/dotfiles', {'rtp': 'vim/'}
 
 syntax on
@@ -41,11 +42,9 @@ set laststatus=2
 
 filetype plugin indent on
 
-colorscheme evening
-
-highlight NonText guifg=grey70 guibg=grey20
-highlight SpecialKey guifg=grey70 guibg=grey20
-highlight LineNr guibg=grey40
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 "
 "http://vimcasts.org/episodes/tidying-whitespace
