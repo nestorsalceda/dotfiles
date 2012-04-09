@@ -11,7 +11,7 @@ Bundle 'mako.vim'
 Bundle 'pyflakes.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'nestor-salceda/dotfiles', {'rtp': 'vim/'}
+Bundle 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
 
 syntax on
 
