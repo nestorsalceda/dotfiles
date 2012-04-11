@@ -8,42 +8,33 @@ function create_symlinks() {
 	done
 }
 
-function install_or_upgrade_vundle() {
-	vundle_dir=~/.vim/bundle/vundle
-	if [[ ! -d $vundle_dir ]]; then
-		git clone http://github.com/gmarik/vundle.git $vundle_dir
+function clone_or_upgrade_repository() {
+	repository=$1
+	destination=$2
+	if [[ ! -d $destination ]]; then
+		git clone $repository $destination
 	else
-		pushd $vundle_dir
+		pushd $destination
 		git pull
 		popd
 	fi
+}
 
+function install_or_upgrade_vundle() {
+	clone_or_upgrade_repository https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 	vim -c "BundleInstall!" -c ":q!" -c ":q!"
 }
 
 function install_or_upgrade_oh_my_zsh() {
 	oh_my_zsh_dir=~/.oh-my-zsh
-	if [[ ! -d $oh_my_zsh_dir ]]; then
-		git clone git://github.com/robbyrussell/oh-my-zsh.git $oh_my_zsh_dir
-	else
-		pushd $oh_my_zsh_dir
-		git pull
-		popd
-	fi
+	clone_or_upgrade_repository https://github.com/robbyrussell/oh-my-zsh.git $oh_my_zsh_dir
 	ln -sf $PWD/zsh/zshrc ~/.zshrc
-	ln -sf $PWD/zsh/nestor_salceda.zsh-theme ~/.oh-my-zsh/themes/nestor_salceda.zsh-theme
-	ln -sf $PWD/zsh/virtualenvwrapper.zsh ~/.oh-my-zsh/custom/virtualenvwrapper.zsh
+	ln -sf $PWD/zsh/nestor_salceda.zsh-theme $oh_my_zsh_dir/themes/nestor_salceda.zsh-theme
+	ln -sf $PWD/zsh/virtualenvwrapper.zsh $oh_my_zsh_dir/custom/virtualenvwrapper.zsh
 }
 
 function install_or_upgrade_patched_fonts() {
-	patched_fonts_dir=~/.fonts/ttf-dejavu-powerline
-	if [[ ! -d $patched_fonts_dir ]]; then
-		git clone git://gist.github.com/1630581.git ~/.fonts/ttf-dejavu-powerline
-	else
-		pushd $patched_fonts_dir
-		git pull
-		popd
-	fi
+	clone_or_upgrade_repository git://gist.github.com/1630581.git ~/.fonts/ttf-dejavu-powerline
 }
 
 create_symlinks
