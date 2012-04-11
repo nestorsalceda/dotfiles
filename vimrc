@@ -11,6 +11,7 @@ Bundle 'mako.vim'
 Bundle 'pyflakes.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
 
 syntax on
@@ -25,19 +26,7 @@ set hlsearch
 set listchars=tab:▸\ ,eol:¬
 set list
 
-"
-" http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
-"
-set statusline=   " clear the statusline for when vimrc is reloaded
-set statusline+=%f\                          " file name
-set statusline+=%h%m%r%w                     " flags
-set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
-set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
-set statusline+=%{&fileformat}]              " file format
-set statusline+=%=                           " right align
-set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
-set statusline+=%-1.(%l,%c%V%)\ %<%P        " offset
-
+let g:Powerline_symbols='fancy'
 set laststatus=2
 
 filetype plugin indent on

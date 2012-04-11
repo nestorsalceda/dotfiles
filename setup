@@ -35,6 +35,18 @@ function install_or_upgrade_oh_my_zsh() {
 	ln -sf $PWD/zsh/virtualenvwrapper.zsh ~/.oh-my-zsh/custom/virtualenvwrapper.zsh
 }
 
+function install_or_upgrade_patched_fonts() {
+	patched_fonts_dir=~/.fonts/ttf-dejavu-powerline
+	if [[ ! -d $patched_fonts_dir ]]; then
+		git clone git://gist.github.com/1630581.git ~/.fonts/ttf-dejavu-powerline
+	else
+		pushd $patched_fonts_dir
+		git pull
+		popd
+	fi
+}
+
 create_symlinks
+install_or_upgrade_patched_fonts
 install_or_upgrade_vundle
 install_or_upgrade_oh_my_zsh
