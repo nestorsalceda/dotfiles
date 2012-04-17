@@ -39,6 +39,10 @@ map <C-x> :NERDTreeToggle<CR>
 Bundle 'scrooloose/nerdcommenter'
 let mapleader=","
 
+Bundle 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=0
+
 Bundle 'snipMate'
 Bundle 'matchit.zip'
 Bundle 'tpope/vim-surround'
@@ -50,7 +54,6 @@ Bundle 'argtextobj.vim'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
 Bundle 'mako.vim'
-Bundle 'pyflakes.vim'
 
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
