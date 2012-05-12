@@ -31,6 +31,7 @@ function install_or_upgrade_oh_my_zsh() {
 	ln -sf $PWD/zsh/zshrc ~/.zshrc
 	ln -sf $PWD/zsh/nestor_salceda.zsh-theme $oh_my_zsh_dir/themes/nestor_salceda.zsh-theme
 	ln -sf $PWD/zsh/virtualenvwrapper.zsh $oh_my_zsh_dir/custom/virtualenvwrapper.zsh
+	ln -sf $PWD/zsh/rvm.zsh $oh_my_zsh_dir/custom/rvm.zsh
 }
 
 function install_or_upgrade_patched_fonts() {
