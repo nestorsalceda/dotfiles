@@ -51,6 +51,10 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
 
+Bundle 'kien/ctrlp.vim'
+nmap <leader>e :CtrlP<CR>
+set wildignore+=*.pyc
+
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
 Bundle 'mako.vim'
