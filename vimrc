@@ -55,6 +55,9 @@ Bundle 'kien/ctrlp.vim'
 nmap <leader>e :CtrlP<CR>
 set wildignore+=*.pyc
 
+Bundle 'myusuf3/numbers.vim'
+nnoremap <F3> :NumbersToggle<CR>
+
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
 Bundle 'mako.vim'
