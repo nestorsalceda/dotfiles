@@ -32,6 +32,12 @@ function install_or_upgrade_oh_my_zsh() {
 	ln -sf $PWD/zsh/nestor_salceda.zsh-theme $oh_my_zsh_dir/themes/nestor_salceda.zsh-theme
 	ln -sf $PWD/zsh/virtualenvwrapper.zsh $oh_my_zsh_dir/custom/virtualenvwrapper.zsh
 	ln -sf $PWD/zsh/rvm.zsh $oh_my_zsh_dir/custom/rvm.zsh
+	install_or_upgrade_zsh_syntax_highlighting
+}
+
+function install_or_upgrade_zsh_syntax_highlighting() {
+	oh_my_zsh_dir=~/.oh-my-zsh
+	clone_or_upgrade_repository git://github.com/zsh-users/zsh-syntax-highlighting.git $oh_my_zsh_dir/custom/plugins/zsh-syntax-highlighting
 }
 
 function install_or_upgrade_patched_fonts() {

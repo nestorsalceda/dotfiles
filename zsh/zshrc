@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(debian git vi-mode mercurial python rvm virtualenvwrapper pip knife)
+plugins=(debian git vi-mode mercurial python rvm virtualenvwrapper pip knife zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
