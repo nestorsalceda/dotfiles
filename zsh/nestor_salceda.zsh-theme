@@ -24,15 +24,15 @@ function get_background_jobs {
 }
 
 function format_background_jobs {
-    [ $(get_background_jobs) ] && echo "%{$fg_bold[green]%}$(get_background_jobs) %{$reset_color%}"
+    [ $(get_background_jobs) ] && echo "%{$fg_bold[green]%}$(get_background_jobs)%{$reset_color%} "
 }
 
 function format_virtualenv_info {
-    [ $(virtualenv_info) ] && echo "%{$fg_bold[white]%}$(virtualenv_info) %{$reset_color%}"
+    [ $(virtualenv_info) ] && echo "%{$fg_bold[yellow]%}$(virtualenv_info)%{$reset_color%} "
 }
 
 function format_rvm_info {
-    [ $(rvm_prompt_info) != '()' ] && echo "%{$fg_bold[white]%}${${$(rvm_prompt_info)/\(/}/\)/} %{$reset_color%}"
+    [ $(rvm_prompt_info) ] && echo "%{$fg_bold[red]%}${${$(rvm_prompt_info)/\(/}/\)/}%{$reset_color%} "
 }
 
 local return_code="%(?..%{$fg_bold[red]%}%? %{$reset_color%})"
