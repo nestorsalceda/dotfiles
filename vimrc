@@ -33,7 +33,7 @@ Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols='fancy'
 set laststatus=2
 
-Bundle 'The-NERD-tree'
+Bundle 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
 map <C-x> :NERDTreeToggle<CR>
 
