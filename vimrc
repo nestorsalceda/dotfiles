@@ -24,6 +24,7 @@ try
 	set background=dark
 	let g:solarized_termcolors=256
 	colorscheme solarized
+	highlight clear SignColumn
 catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme default
 endtry
@@ -63,6 +64,9 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'mako.vim'
 
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+Bundle 'Jinja'
+Bundle 'puppetlabs/puppet-syntax-vim'
 
 filetype plugin indent on
 
