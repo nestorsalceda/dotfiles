@@ -64,6 +64,8 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'mako.vim'
 
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 
 Bundle 'Jinja'
 Bundle 'puppetlabs/puppet-syntax-vim'
