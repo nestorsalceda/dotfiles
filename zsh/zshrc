@@ -30,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+stty -ixon
 unsetopt correctall
 zstyle ":vcs_info:*" enabled git hg
 cdpath=(. .. ~)
