@@ -23,6 +23,7 @@ Bundle 'altercation/vim-colors-solarized'
 try
 	set background=dark
 	let g:solarized_termcolors=256
+	set t_ut=
 	colorscheme solarized
 	highlight clear SignColumn
 catch /^Vim\%((\a\+)\)\=:E185/
