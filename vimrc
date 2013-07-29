@@ -55,7 +55,7 @@ Bundle 'argtextobj.vim'
 
 Bundle 'kien/ctrlp.vim'
 nmap <leader>e :CtrlP<CR>
-set wildignore+=*.pyc
+set wildignore+=*.pyc,node_modules,*.egg-info
 
 Bundle 'myusuf3/numbers.vim'
 nnoremap <F3> :NumbersToggle<CR>
