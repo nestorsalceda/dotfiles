@@ -39,3 +39,9 @@ source $ZSH/oh-my-zsh.sh
 cdpath=(. .. ~)
 unsetopt correctall
 zstyle ":vcs_info:*" enabled git hg
+
+function set_environment() {
+	env_file="$PWD/.zshenv"
+	if [ -e $env_file ]; then source $env_file; fi
+}
+function chpwd() { set_environment; }
