@@ -9,3 +9,7 @@
 	tool = gvimdiff
 [mergetool]
 	prompt = no
+[push]
+	default = current
+[pull]
+	default = current
