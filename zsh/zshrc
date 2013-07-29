@@ -26,11 +26,14 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 stty -ixon
 
-export TERM="xterm-256color"
+[ -z "$TMUX" ] && export TERM="xterm-256color"
 export EDITOR="vim"
 export PATH=$HOME/bin:$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 
 alias gst='git status -sb'
+
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
 
 plugins=(debian git vi-mode mercurial python virtualenvwrapper pip knife zsh-syntax-highlighting tmux rvm)
 
