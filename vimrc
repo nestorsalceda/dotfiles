@@ -70,6 +70,7 @@ Bundle 'airblade/vim-gitgutter'
 
 Bundle 'Jinja'
 Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'groenewege/vim-less'
 
 filetype plugin indent on
 
