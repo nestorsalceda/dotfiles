@@ -41,7 +41,9 @@ function install_or_upgrade_zsh_syntax_highlighting() {
 }
 
 function install_or_upgrade_patched_fonts() {
-	clone_or_upgrade_repository git://gist.github.com/1630581.git ~/.fonts/ttf-dejavu-powerline
+	wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf -O ~/.fonts/PowerLineSymbols.otf
+	fc-cache -vf ~/.fonts
+	wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf -O ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
 }
 
 create_symlinks

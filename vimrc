@@ -10,6 +10,7 @@ set listchars=tab:▸\ ,eol:¬
 set list
 set wildmenu
 set wildmode=list:longest
+imap jj <Esc>
 
 " Vundle
 set nocompatible
@@ -30,8 +31,8 @@ catch /^Vim\%((\a\+)\)\=:E185/
 	colorscheme default
 endtry
 
-Bundle 'Lokaltog/vim-powerline'
-let g:Powerline_symbols='fancy'
+Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
 set laststatus=2
 
 Bundle 'scrooloose/nerdtree'
