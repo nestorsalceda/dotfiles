@@ -6,10 +6,8 @@
 [color]
 	ui = true
 [merge]
-	tool = gvimdiff
+	tool = vimdiff
 [mergetool]
 	prompt = no
 [push]
-	default = current
-[pull]
 	default = current

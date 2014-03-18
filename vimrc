@@ -10,6 +10,7 @@ set listchars=tab:▸\ ,eol:¬
 set list
 set wildmenu
 set wildmode=list:longest
+set mouse=a
 imap jj <Esc>
 
 " Vundle
@@ -23,7 +24,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 try
 	set background=dark
-	let g:solarized_termcolors=256
+	let g:solarized_termcolors=16
 	set t_ut=
 	colorscheme solarized
 	highlight clear SignColumn
@@ -72,6 +73,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Jinja'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'groenewege/vim-less'
+Bundle "ekalinin/Dockerfile.vim"
+Bundle 'chase/vim-ansible-yaml'
 
 filetype plugin indent on
 
