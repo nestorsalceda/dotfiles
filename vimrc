@@ -24,8 +24,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 try
 	set background=dark
-	let g:solarized_termcolors=16
-	set t_ut=
+	set term=xterm-256color
 	colorscheme solarized
 	highlight clear SignColumn
 catch /^Vim\%((\a\+)\)\=:E185/
