@@ -46,6 +46,7 @@ Bundle 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
+Bundle 'rking/ag.vim'
 Bundle 'snipMate'
 Bundle 'matchit.zip'
 Bundle 'tpope/vim-surround'
