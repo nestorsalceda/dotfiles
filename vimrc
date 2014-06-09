@@ -91,3 +91,7 @@ function! Preserve(command)
 endfunction
 
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+
+if has('unnamedplus')
+	set clipboard=unnamed,unnamedplus
+endif
