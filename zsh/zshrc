@@ -38,16 +38,13 @@ plugins=(debian git vi-mode mercurial python virtualenvwrapper pip knife zsh-syn
 
 source $ZSH/oh-my-zsh.sh
 
-alias gst='git status -sb'
 unalias ag
+alias fuck='sudo $(fc -l -n -1)'
+alias gst='git status -sb'
 if [ -e /usr/bin/vim.gtk ]; then alias vim='/usr/bin/vim.gtk'; fi
 
 cdpath=(. .. ~)
 unsetopt correctall
 zstyle ":vcs_info:*" enabled git hg
 
-function set_environment() {
-	env_file="$PWD/.zshenv"
-	if [ -e $env_file ]; then source $env_file; fi
-}
-function chpwd() { set_environment; }
+eval "$(direnv hook zsh)"
