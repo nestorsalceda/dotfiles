@@ -26,6 +26,8 @@ TERM cons25
 TERM console
 TERM cygwin
 TERM dtterm
+TERM dvtm
+TERM dvtm-256color
 TERM eterm-color
 TERM fbterm
 TERM gnome
@@ -166,6 +168,7 @@ EXEC 00;38;5;64
 .tif    00;38;5;136
 .tiff   00;38;5;136
 .png    00;38;5;136
+.PNG    00;38;5;136
 .svg    00;38;5;136
 .svgz   00;38;5;136
 .mng    00;38;5;136
@@ -180,7 +183,7 @@ EXEC 00;38;5;64
 .CR2    00;38;5;136
 .ico    00;38;5;136
 
-# Files of special interest (base1 + bold)
+# Files of special interest (base1)
 .tex             00;38;5;245
 .rdf             00;38;5;245
 .owl             00;38;5;245
@@ -207,6 +210,7 @@ EXEC 00;38;5;64
 .c               00;38;5;245
 .cpp             00;38;5;245
 .cc              00;38;5;245
+.sqlite          00;38;5;245
 
 # "unimportant" files as logs and backups (base01)
 .log        00;38;5;240
@@ -252,6 +256,7 @@ EXEC 00;38;5;64
 
 # Video formats (as audio + bold)
 .mov    00;38;5;166
+.MOV    00;38;5;166
 .mpg    00;38;5;166
 .mpeg   00;38;5;166
 .m2v    00;38;5;166
