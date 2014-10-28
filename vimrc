@@ -54,6 +54,10 @@ Bundle 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
 Bundle 'kana/vim-textobj-user'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'argtextobj.vim'
+Bundle 'majutsushi/tagbar'
+let g:tagbar_compact = 1
+let g:tagbar_sort = 0
+nmap <leader>t :TagbarToggle<CR>
 
 Bundle 'kien/ctrlp.vim'
 nmap <leader>e :CtrlP<CR>
