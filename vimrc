@@ -32,7 +32,6 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 
 Bundle 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
 set laststatus=2
 
 Bundle 'scrooloose/nerdtree'

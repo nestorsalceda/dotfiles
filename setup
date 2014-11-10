@@ -40,13 +40,6 @@ function install_or_upgrade_zsh_syntax_highlighting() {
 	clone_or_upgrade_repository git://github.com/zsh-users/zsh-syntax-highlighting.git $oh_my_zsh_dir/custom/plugins/zsh-syntax-highlighting
 }
 
-function install_or_upgrade_patched_fonts() {
-	wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf -O ~/.fonts/PowerLineSymbols.otf
-	fc-cache -vf ~/.fonts
-	wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf -O ~/.config/fontconfig/conf.d/10-powerline-symbols.conf
-}
-
 create_symlinks
-install_or_upgrade_patched_fonts
 install_or_upgrade_vundle
 install_or_upgrade_oh_my_zsh
