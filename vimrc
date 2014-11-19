@@ -74,8 +74,8 @@ Bundle 'kien/ctrlp.vim'
 nmap <leader>e :CtrlP<CR>
 set wildignore+=*.pyc,node_modules,*.egg-info
 
-Bundle 'myusuf3/numbers.vim'
-nnoremap <F3> :NumbersToggle<CR>
+"Bundle 'myusuf3/numbers.vim'
+"nnoremap <F3> :NumbersToggle<CR>
 
 Bundle 'nelstrom/vim-textobj-rubyblock'
 
@@ -88,7 +88,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'Jinja'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'groenewege/vim-less'
-Bundle "ekalinin/Dockerfile.vim"
+Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'chase/vim-ansible-yaml'
 Bundle 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
