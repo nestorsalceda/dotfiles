@@ -35,7 +35,7 @@ export GOPATH=~/.go-workspace
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
 
-plugins=(debian git vi-mode mercurial python virtualenvwrapper pip knife zsh-syntax-highlighting tmux tmuxinator rvm gitignore docker go web-search)
+plugins=(debian git vi-mode mercurial python virtualenvwrapper pip knife zsh-syntax-highlighting tmux tmuxinator rvm gitignore docker go web-search archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
