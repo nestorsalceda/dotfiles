@@ -40,7 +40,6 @@ endif
 " unicode symbols
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
@@ -81,6 +80,7 @@ Bundle 'mako.vim'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'terryma/vim-multiple-cursors'
 
 Bundle 'Jinja'
 Bundle 'puppetlabs/puppet-syntax-vim'
