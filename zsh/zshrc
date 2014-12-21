@@ -30,7 +30,7 @@ eval `dircolors $HOME/.dircolors`
 [ -z "$TMUX" ] && export TERM="xterm-256color"
 export EDITOR="vim"
 export PATH=$HOME/bin:$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-export GOPATH=$/.go-workspace
+export GOPATH=~/.go-workspace
 
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
@@ -49,3 +49,6 @@ unsetopt correctall
 zstyle ":vcs_info:*" enabled git hg
 
 eval "$(direnv hook zsh)"
+
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
