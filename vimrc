@@ -17,21 +17,12 @@ imap jj <Esc>
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-try
-	set background=dark
-	set term=xterm-256color
-	colorscheme solarized
-	highlight clear SignColumn
-catch /^Vim\%((\a\+)\)\=:E185/
-	colorscheme default
-endtry
-
-Bundle 'bling/vim-airline'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 set laststatus=2
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -45,52 +36,62 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
 map <C-x> :NERDTreeToggle<CR>
 
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 let mapleader=","
 
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
-Bundle 'rking/ag.vim'
-Bundle 'snipMate'
-Bundle 'matchit.zip'
-Bundle 'tpope/vim-surround'
-Bundle 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
-Bundle 'kana/vim-textobj-user'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'argtextobj.vim'
-Bundle 'majutsushi/tagbar'
+Plugin 'rking/ag.vim'
+Plugin 'matchit.zip'
+Plugin 'tpope/vim-surround'
+Plugin 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
+Plugin 'kana/vim-textobj-user'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'argtextobj.vim'
+Plugin 'majutsushi/tagbar'
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 nmap <leader>t :TagbarToggle<CR>
 
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 nmap <leader>e :CtrlP<CR>
 set wildignore+=*.pyc,node_modules,*.egg-info
 
-Bundle 'nelstrom/vim-textobj-rubyblock'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
-Bundle 'mako.vim'
+Plugin 'mako.vim'
 
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'benmills/vimux'
 
-Bundle 'Jinja'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'groenewege/vim-less'
-Bundle 'ekalinin/Dockerfile.vim'
-Bundle 'chase/vim-ansible-yaml'
-Bundle 'fatih/vim-go'
+Plugin 'Jinja'
+Plugin 'puppetlabs/puppet-syntax-vim'
+Plugin 'groenewege/vim-less'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
 
+call vundle#end()
 filetype plugin indent on
+
+try
+	set background=dark
+	set term=xterm-256color
+	colorscheme solarized
+	highlight clear SignColumn
+catch /^Vim\%((\a\+)\)\=:E185/
+	colorscheme default
+endtry
 
 " http://vimcasts.org/episodes/tidying-whitespace
 function! Preserve(command)

@@ -21,8 +21,8 @@ function clone_or_upgrade_repository() {
 }
 
 function install_or_upgrade_vundle() {
-	clone_or_upgrade_repository https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-	vim -c "BundleInstall!" -c ":q!" -c ":q!"
+	clone_or_upgrade_repository https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	vim -c "PluginInstall" -c ":q!" -c ":q!"
 }
 
 function install_or_upgrade_oh_my_zsh() {
