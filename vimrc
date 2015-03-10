@@ -85,29 +85,30 @@ call vundle#end()
 filetype plugin indent on
 
 try
-	set background=dark
-	set term=xterm-256color
-	colorscheme solarized
-	highlight clear SignColumn
+  set background=light
+  set term=xterm-256color
+  colorscheme solarized
+  highlight clear SignColumn
+  highlight SpecialKey ctermbg=15
 catch /^Vim\%((\a\+)\)\=:E185/
-	colorscheme default
+  colorscheme default
 endtry
 
 " http://vimcasts.org/episodes/tidying-whitespace
 function! Preserve(command)
-	" Preparation: save last search, and cursor position.
-	let _s=@/
-	let l = line(".")
-	let c = col(".")
-	" Do the business:
-	execute a:command
-	" Clean up: restore previous search history, and cursor position
-	let @/=_s
-	call cursor(l, c)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
 endfunction
 
 autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
 if has('unnamedplus')
-	set clipboard=unnamed,unnamedplus
+  set clipboard=unnamed,unnamedplus
 endif
