@@ -40,9 +40,9 @@ local background_jobs='$(format_background_jobs)'
 local virtualenv_info='$(format_virtualenv_info)'
 local rvm_info='$(format_rvm_info)'
 local user_host="%{%F{blue}%}%n@%m%{$reset_color%}"
-local current_dir="%{%F{white}%}%~%{$reset_color%}"
+local current_dir="%{%F{gray}%}%~%{$reset_color%}"
 
 PROMPT="${return_code}${background_jobs}${rvm_info}${virtualenv_info}${user_host}:${current_dir}
-%{%F{white}%}»%{$reset_color%} "
+%{%F{gray}%}»%{$reset_color%} "
 
 RPROMPT='$vcs_info_msg_0_'
