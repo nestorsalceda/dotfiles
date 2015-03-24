@@ -80,6 +80,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
+Plugin 'slim-template/vim-slim'
 
 call vundle#end()
 filetype plugin indent on
