@@ -1,54 +1,26 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="nestor_salceda"
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-# Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want disable red dots displayed while waiting for completion
-# DISABLE_COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-stty -ixon
-
-eval `dircolors $HOME/.dircolors`
-[ -z "$TMUX" ] && export TERM="xterm-256color"
-export EDITOR="vim"
-export PATH=$HOME/bin:$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-export GOPATH=~/.go-workspace
-
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT=false
-
-plugins=(debian git vi-mode mercurial python virtualenvwrapper pip knife zsh-syntax-highlighting tmux tmuxinator rvm gitignore docker go web-search archlinux)
-
-source $ZSH/oh-my-zsh.sh
-
-unalias ag
-alias fuck='sudo $(fc -l -n -1)'
-alias gst='git status -sb'
-if [ -e /usr/bin/vim.gtk ]; then alias vim='/usr/bin/vim.gtk'; fi
-
-cdpath=(. .. ~)
 unsetopt correctall
-zstyle ":vcs_info:*" enabled git hg
+cdpath=(. .. ~)
 
+# Customize to your needs...
+eval `dircolors $HOME/.dircolors`
 eval "$(direnv hook zsh)"
 
-alias grep="/usr/bin/grep $GREP_OPTIONS"
-unset GREP_OPTIONS
+[ -z "$TMUX" ] && export TERM="xterm-256color"
+export EDITOR="vim"
+export GOPATH=~/.go-workspace
+
+if [ -e /usr/bin/vim.gtk ]; then alias vim='/usr/bin/vim.gtk'; fi
+alias fuck='sudo $(fc -l -n -1)'
+alias gst='git status -sb'
