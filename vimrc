@@ -48,6 +48,8 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
 Plugin 'rking/ag.vim'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
 Plugin 'matchit.zip'
 Plugin 'tpope/vim-surround'
 Plugin 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
@@ -81,6 +83,7 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'fatih/vim-go'
 let g:go_fmt_command = "goimports"
 Plugin 'slim-template/vim-slim'
+Plugin 'hynek/vim-python-pep8-indent'
 
 call vundle#end()
 filetype plugin indent on

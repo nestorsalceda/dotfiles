@@ -12,10 +12,11 @@ function clone_or_upgrade_repository {
 	repository=$1
 	destination=$2
 	if [[ ! -d $destination ]]; then
-		git clone $repository $destination
+		git clone --recursive $repository $destination
 	else
 		pushd $destination
 		git pull
+		git submodule update --init --recursive
 		popd
 	fi
 }
