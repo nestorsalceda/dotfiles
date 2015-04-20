@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+unsetopt flowcontrol
+stty -ixon -ixoff 2>/dev/null
+
 unsetopt correctall
 cdpath=(. .. ~)
 
