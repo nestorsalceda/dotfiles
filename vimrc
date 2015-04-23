@@ -89,11 +89,10 @@ call vundle#end()
 filetype plugin indent on
 
 try
-  set background=light
+  set background=dark
   set term=xterm-256color
   colorscheme solarized
   highlight clear SignColumn
-  highlight SpecialKey ctermbg=15
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
 endtry
