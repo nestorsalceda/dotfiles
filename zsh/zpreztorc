@@ -38,7 +38,8 @@ zstyle ':prezto:load' pmodule \
   'history-substring-search' \
   'ruby' \
   'python' \
-  'tmux'
+  'tmux' \
+  'fasd'
 
 #
 # Editor
