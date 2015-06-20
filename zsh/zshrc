@@ -17,7 +17,6 @@ unsetopt correctall
 cdpath=(. .. ~)
 
 # Customize to your needs...
-eval `dircolors $HOME/.dircolors`
 eval "$(direnv hook zsh)"
 
 [ -z "$TMUX" ] && export TERM="xterm-256color"
