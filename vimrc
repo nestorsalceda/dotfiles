@@ -12,6 +12,7 @@ set wildmenu
 set wildmode=list:longest
 set mouse=a
 imap jj <Esc>
+cmap w!! w !sudo tee % >/dev/null
 
 " Vundle
 set nocompatible
