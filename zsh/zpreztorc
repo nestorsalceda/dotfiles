@@ -39,6 +39,7 @@ zstyle ':prezto:load' pmodule \
   'ruby' \
   'python' \
   'tmux' \
+  'ssh' \
   'fasd'
 
 #
@@ -116,7 +117,7 @@ zstyle ':prezto:module:prompt' theme 'nestorsalceda'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities '~/.ssh/id_rsa'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa'
 
 #
 # Syntax Highlighting
