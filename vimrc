@@ -1,3 +1,72 @@
+" Plug
+call plug#begin()
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-airline'
+set laststatus=2
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+
+
+Plug 'scrooloose/nerdtree'
+let NERDTreeIgnore=['\.pyc$', '\.orig$']
+map <C-x> :NERDTreeToggle<CR>
+
+Plug 'scrooloose/nerdcommenter'
+let mapleader=","
+
+Plug 'scrooloose/syntastic'
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=0
+
+Plug 'rking/ag.vim'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+Plug 'matchit.zip'
+Plug 'tpope/vim-surround'
+Plug 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
+Plug 'kana/vim-textobj-user'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'argtextobj.vim'
+Plug 'majutsushi/tagbar'
+let g:tagbar_compact = 1
+let g:tagbar_sort = 0
+nmap <leader>t :TagbarToggle<CR>
+
+Plug 'kien/ctrlp.vim'
+nmap <leader>e :CtrlP<CR>
+set wildignore+=*.pyc,node_modules,*.egg-info
+
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+Plug 'mako.vim'
+
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'benmills/vimux'
+
+Plug 'Jinja'
+Plug 'puppetlabs/puppet-syntax-vim'
+Plug 'groenewege/vim-less'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'chase/vim-ansible-yaml'
+Plug 'fatih/vim-go'
+let g:go_fmt_command = "goimports"
+Plug 'slim-template/vim-slim'
+Plug 'hynek/vim-python-pep8-indent'
+
+call plug#end()
+
 syntax on
 set number
 set showmatch
@@ -13,81 +82,6 @@ set wildmode=list:longest
 set mouse=a
 imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null
-
-" Vundle
-set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-set laststatus=2
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
-
-
-Plugin 'scrooloose/nerdtree'
-let NERDTreeIgnore=['\.pyc$', '\.orig$']
-map <C-x> :NERDTreeToggle<CR>
-
-Plugin 'scrooloose/nerdcommenter'
-let mapleader=","
-
-Plugin 'scrooloose/syntastic'
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=0
-
-Plugin 'rking/ag.vim'
-"Plugin 'SirVer/ultisnips'
-"Plugin 'honza/vim-snippets'
-Plugin 'matchit.zip'
-Plugin 'tpope/vim-surround'
-Plugin 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
-Plugin 'kana/vim-textobj-user'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'argtextobj.vim'
-Plugin 'majutsushi/tagbar'
-let g:tagbar_compact = 1
-let g:tagbar_sort = 0
-nmap <leader>t :TagbarToggle<CR>
-
-Plugin 'kien/ctrlp.vim'
-nmap <leader>e :CtrlP<CR>
-set wildignore+=*.pyc,node_modules,*.egg-info
-
-Plugin 'nelstrom/vim-textobj-rubyblock'
-
-Plugin 'mako.vim'
-
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'benmills/vimux'
-
-Plugin 'Jinja'
-Plugin 'puppetlabs/puppet-syntax-vim'
-Plugin 'groenewege/vim-less'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'fatih/vim-go'
-let g:go_fmt_command = "goimports"
-Plugin 'slim-template/vim-slim'
-Plugin 'hynek/vim-python-pep8-indent'
-
-call vundle#end()
-filetype plugin indent on
 
 try
   set background=dark

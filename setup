@@ -21,9 +21,9 @@ function clone_or_upgrade_repository {
 	fi
 }
 
-function install_or_upgrade_vundle {
-	clone_or_upgrade_repository https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	vim -c "PluginInstall" -c ":q!" -c ":q!"
+function install_or_upgrade_plug {
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	vim -c "PlugInstall!" -c ":q!" -c ":q!"
 }
 
 function install_or_upgrade_prezto {
@@ -46,5 +46,5 @@ function create_prezto_symlinks {
 }
 
 create_symlinks
-install_or_upgrade_vundle
+install_or_upgrade_plug
 install_or_upgrade_prezto
