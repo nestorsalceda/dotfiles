@@ -20,7 +20,6 @@ Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
 map <C-x> :NERDTreeToggle<CR>
 
-Plug 'scrooloose/nerdcommenter'
 let mapleader=","
 
 Plug 'scrooloose/syntastic'
@@ -28,8 +27,6 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
 Plug 'rking/ag.vim'
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
 Plug 'matchit.zip'
 Plug 'tpope/vim-surround'
 Plug 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
@@ -47,13 +44,9 @@ set wildignore+=*.pyc,node_modules,*.egg-info
 
 Plug 'nelstrom/vim-textobj-rubyblock'
 
-Plug 'mako.vim'
-
-Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'benmills/vimux'
 
 Plug 'Jinja'
 Plug 'puppetlabs/puppet-syntax-vim'
