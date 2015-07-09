@@ -1,6 +1,5 @@
 " Plug
 call plug#begin()
-
 Plug 'tpope/vim-sensible'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
@@ -17,6 +16,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
@@ -28,7 +28,6 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 let g:go_fmt_command = "goimports"
 
 Plug 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
-
 call plug#end()
 
 let mapleader=","
@@ -75,21 +74,6 @@ set wildmode=list:longest
 
 imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null
-"
-" http://vimcasts.org/episodes/tidying-whitespace
-function! Preserve(command)
-  " Preparation: save last search, and cursor position.
-  let _s=@/
-  let l = line(".")
-  let c = col(".")
-  " Do the business:
-  execute a:command
-  " Clean up: restore previous search history, and cursor position
-  let @/=_s
-  call cursor(l, c)
-endfunction
-
-autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
