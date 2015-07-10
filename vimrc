@@ -64,7 +64,6 @@ let g:pymode_lint = 0
 let g:pymode_breakpoint = 0
 let g:pymode_rope = 0
 
-set cursorline
 set hlsearch
 set list
 set listchars=tab:▸\ ,eol:¬
