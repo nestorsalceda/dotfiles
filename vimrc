@@ -21,6 +21,9 @@ Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 
+Plug 'tpope/vim-dispatch'
+Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go'] }
+
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'klen/python-mode', { 'for': 'python' }
 Plug 'slim-template/vim-slim', { 'for': 'slim' }
@@ -57,6 +60,14 @@ let g:syntastic_enable_signs=0
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 nmap <leader>t :TagbarToggle<CR>
+
+let test#strategy = 'dispatch'
+let test#ruby#rspec#executable = 'rspec'
+nmap <silent> <leader>rt :TestFile<CR>
+nmap <silent> <leader>rn :TestNearest<CR>
+nmap <silent> <leader>ra :TestSuite<CR>
+nmap <silent> <leader>rl :TestLast<CR>
+nmap <silent> <leader>rg :TestVisit<CR>
 
 let g:pymode_warnings = 0
 let g:pymode_folding = 0
