@@ -15,8 +15,7 @@ function clone_or_upgrade_repository {
 		git clone --recursive $repository $destination
 	else
 		pushd $destination
-		git pull
-		git submodule update --init --recursive
+		git pull --recurse-submodules
 		popd
 	fi
 }
