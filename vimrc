@@ -22,7 +22,7 @@ Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 
-Plug 'tpope/vim-dispatch', { 'on': 'Dispatch' }
+Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
 Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go'] }
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
