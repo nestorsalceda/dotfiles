@@ -6,7 +6,7 @@ Plug 'bling/vim-airline'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
-Plug 'rking/ag.vim', { 'on': 'Ag' }
+Plug 'wincent/ferret', { 'on': ['Ack', 'Acks'] }
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
