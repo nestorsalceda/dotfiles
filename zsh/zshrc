@@ -21,6 +21,7 @@ eval "$(direnv hook zsh)"
 
 [ -z "$TMUX" ] && export TERM="xterm-256color"
 export EDITOR="vim"
+export VISUAL="vim"
 export GOPATH=~/.go-workspace
 
 if [ -e /usr/bin/vim.gtk ]; then alias vim='/usr/bin/vim.gtk'; fi
