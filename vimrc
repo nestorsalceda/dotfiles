@@ -32,8 +32,8 @@ Plug 'slim-template/vim-slim', { 'for': 'slim' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 let g:go_fmt_command = "goimports"
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
-
 Plug 'nestorsalceda/dotfiles', {'rtp': 'vim/'}
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 call plug#end()
 
 let mapleader=","
