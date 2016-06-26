@@ -20,6 +20,7 @@ Plug 'argtextobj.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
+Plug 'terryma/vim-expand-region'
 
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
