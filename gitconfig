@@ -6,7 +6,7 @@
 [color]
 	ui = true
 [merge]
-	tool = vimdiff
+	tool = meld
 [mergetool]
 	prompt = no
 [push]
