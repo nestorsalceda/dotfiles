@@ -43,6 +43,7 @@ let mapleader=","
 set background=dark
 colorscheme solarized
 highlight clear SignColumn
+set colorcolumn=80
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
