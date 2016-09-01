@@ -39,6 +39,8 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 let g:go_fmt_command = "goimports"
 Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 call plug#end()
 
