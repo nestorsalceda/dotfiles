@@ -24,6 +24,5 @@ export EDITOR="vim"
 export VISUAL="vim"
 export GOPATH=~/.go-workspace
 
-if [ -e /usr/bin/vim.gtk ]; then alias vim='/usr/bin/vim.gtk'; fi
 alias fuck='sudo $(fc -l -n -1)'
 alias gst='git status -sb'
