@@ -30,7 +30,7 @@ Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 
 Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
-Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go'] }
+Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go', 'javascript'] }
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'klen/python-mode', { 'for': 'python' }
