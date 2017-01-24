@@ -9,6 +9,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'wincent/ferret', { 'on': ['Ack', 'Acks'] }
+Plug 'matze/vim-move'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
