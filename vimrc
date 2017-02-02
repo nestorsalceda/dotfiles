@@ -7,7 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'wincent/ferret', { 'on': ['Ack', 'Acks'] }
 
 Plug 'tpope/vim-fugitive'
@@ -63,7 +63,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
 map <C-x> :NERDTreeToggle<CR>
 
-nmap <leader>e :CtrlP<CR>
+nmap <leader>e :FZF<CR>
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
