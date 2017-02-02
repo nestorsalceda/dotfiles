@@ -72,8 +72,11 @@ let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 nmap <leader>t :TagbarToggle<CR>
 
-let test#strategy = 'dispatch'
-let test#ruby#rspec#executable = 'rspec'
+if has('nvim')
+  let test#strategy = 'neovim'
+else
+  let test#strategy = 'dispatch'
+end
 nmap <silent> <leader>rt :TestFile<CR>
 nmap <silent> <leader>rn :TestNearest<CR>
 nmap <silent> <leader>ra :TestSuite<CR>
