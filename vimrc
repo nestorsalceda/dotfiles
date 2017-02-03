@@ -26,7 +26,12 @@ Plug 'tpope/vim-endwise'
 Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'terryma/vim-expand-region'
 
-Plug 'scrooloose/syntastic'
+
+if has('nvim')
+  Plug 'neomake/neomake'
+else
+  Plug 'scrooloose/syntastic'
+endif
 Plug 'majutsushi/tagbar'
 
 Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
@@ -67,6 +72,9 @@ nmap <leader>e :FZF<CR>
 
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
+
+"let g:neomake_highlight_lines=1
+autocmd! BufWritePost * Neomake
 
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
