@@ -7,7 +7,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 Plug 'wincent/ferret', { 'on': ['Ack', 'Acks'] }
 
 Plug 'tpope/vim-fugitive'
