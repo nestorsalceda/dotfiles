@@ -74,7 +74,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
 "let g:neomake_highlight_lines=1
-autocmd! BufWritePost * Neomake
+autocmd! BufWritePost,BufEnter * Neomake
 
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
