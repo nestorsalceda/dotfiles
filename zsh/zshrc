@@ -20,10 +20,9 @@ cdpath=(. .. ~)
 eval "$(direnv hook zsh)"
 
 [ -z "$TMUX" ] && export TERM="xterm-256color"
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR="vim"
+export VISUAL="vim"
 export GOPATH=~/.go-workspace
 
 alias fuck='sudo $(fc -l -n -1)'
 alias gst='git status -sb'
-alias vim='nvim'
