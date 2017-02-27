@@ -27,7 +27,7 @@ function install_or_upgrade_plug {
 
 function install_or_upgrade_prezto {
 	zprezto_dir=~/.zprezto
-	clone_or_upgrade_repository https://github.com/sorin-ionescu/prezto.git $zprezto_dir
+	clone_or_upgrade_repository https://github.com/zsh-users/prezto.git $zprezto_dir
 	create_prezto_symlinks
 	echo "Creating symlink to ~/.zshrc"
 	ln -sf $PWD/zsh/zshrc ~/.zshrc
