@@ -110,6 +110,7 @@ set wildmode=list:longest
 imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null
 
+set clipboard=unnamed
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
