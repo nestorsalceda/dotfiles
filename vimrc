@@ -1,7 +1,7 @@
 " Plug
 call plug#begin()
 Plug 'tpope/vim-sensible'
-Plug 'altercation/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
@@ -47,14 +47,16 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'posva/vim-vue'
+"Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
 let mapleader=","
 
-set background=dark
-colorscheme solarized
-highlight clear SignColumn
-set colorcolumn=80
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
