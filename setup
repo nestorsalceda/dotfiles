@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 function create_symlinks {
-	symlinks=(vimrc gvimrc gitconfig hgrc tmux.conf dir_colors agignore gemrc)
+	symlinks=(vimrc gvimrc gitconfig hgrc tmux.conf agignore gemrc)
 	for symlink in $symlinks; do
 		echo "Creating symlink to ~/.$symlink"
 		ln -sf $PWD/$symlink ~/.$symlink
@@ -20,14 +20,14 @@ function clone_or_upgrade_repository {
 	fi
 }
 
-function install_or_upgrade_plug {
+function configure_vim {
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	vim -c "PlugUpdate!" -c ":q!" -c ":q!"
 }
 
 function install_or_upgrade_prezto {
 	zprezto_dir=~/.zprezto
-	clone_or_upgrade_repository https://github.com/zsh-users/prezto.git $zprezto_dir
+	clone_or_upgrade_repository https://github.com/sorin-ionescu/prezto.git $zprezto_dir
 	create_prezto_symlinks
 	echo "Creating symlink to ~/.zshrc"
 	ln -sf $PWD/zsh/zshrc ~/.zshrc
@@ -35,6 +35,8 @@ function install_or_upgrade_prezto {
 	ln -sf $PWD/zsh/zpreztorc ~/.zpreztorc
 	echo "Creating symlink to $zprezto_dir/modules/prompt/functions/prompt_nestorsalceda_setup"
 	ln -sf $PWD/zsh/prompt_nestorsalceda_setup $zprezto_dir/modules/prompt/functions/prompt_nestorsalceda_setup
+	echo "Creating symlink to $zprezto_dir/modules/base16"
+	ln -sf $PWD/zsh/modules/base16 $zprezto_dir/modules/base16
 }
 
 function create_prezto_symlinks {
@@ -52,7 +54,12 @@ function configure_neovim {
 	nvim -c "PlugUpdate!" -c ":q!" -c ":q!"
 }
 
+function configure_base16 {
+	clone_or_upgrade_repository https://github.com/chriskempson/base16-shell.git /home/nestor/.config/base16-shell
+}
+
 create_symlinks
-install_or_upgrade_plug
+configure_vim
 install_or_upgrade_prezto
 configure_neovim
+configure_base16
