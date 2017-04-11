@@ -47,7 +47,7 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-Plug 'posva/vim-vue'
+Plug 'posva/vim-vue', { 'for': 'vue' }
 "Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
