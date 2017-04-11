@@ -75,8 +75,10 @@ nmap <leader>e :FZF<CR>
 let g:syntastic_check_on_open=1
 let g:syntastic_enable_signs=0
 
-"let g:neomake_highlight_lines=1
-autocmd! BufWritePost,BufEnter * Neomake
+if has('nvim')
+  "let g:neomake_highlight_lines=1
+  autocmd! BufWritePost,BufEnter * Neomake
+endif
 
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
