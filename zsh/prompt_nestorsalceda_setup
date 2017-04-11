@@ -34,6 +34,11 @@ function prompt_nestorsalceda_precmd {
   if (( $+functions[python-info] )); then
     python-info
   fi
+
+  # Get Node env info
+  if (( $+functions[node-info] )); then
+    node-info
+  fi
 }
 
 function prompt_nestorsalceda_setup {
