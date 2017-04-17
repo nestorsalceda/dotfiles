@@ -36,7 +36,7 @@ function install_or_upgrade_prezto {
 	echo "Creating symlink to $zprezto_dir/modules/prompt/functions/prompt_nestorsalceda_setup"
 	ln -sf $PWD/zsh/prompt_nestorsalceda_setup $zprezto_dir/modules/prompt/functions/prompt_nestorsalceda_setup
 	echo "Creating symlink to $zprezto_dir/modules/base16"
-	ln -sf $PWD/zsh/modules/base16 $zprezto_dir/modules/base16
+	ln -sTf $PWD/zsh/modules/base16 $zprezto_dir/modules/base16
 }
 
 function create_prezto_symlinks {
