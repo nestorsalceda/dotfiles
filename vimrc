@@ -17,7 +17,7 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'kana/vim-textobj-user'
-Plug 'argtextobj.vim'
+Plug 'vim-scripts/argtextobj.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 
