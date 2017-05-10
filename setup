@@ -59,7 +59,7 @@ function configure_base16 {
 }
 
 create_symlinks
+configure_base16
 configure_vim
 install_or_upgrade_prezto
 configure_neovim
-configure_base16
