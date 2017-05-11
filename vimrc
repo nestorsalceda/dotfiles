@@ -5,6 +5,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
+Plug 'editorconfig/editorconfig-vim'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
@@ -23,7 +24,6 @@ Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
-Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'terryma/vim-expand-region'
 
 
