@@ -1,0 +1,20 @@
+# ~/.tmuxinator/outbound-frontend-tests.yml
+
+name: outbound-frontend-tests
+root: ~/Projects/codingstones/peertransfer/outbound-frontend
+
+windows:
+  - tests:
+      panes:
+        - unit:
+          - nvm use
+          - ag -l | entr -c yarn run unit
+        - avoriaz:
+          - nvm use
+          - ag -l | entr -c yarn run avoriaz
+
+  - server:
+      panes:
+        - server:
+          - nvm use
+          - yarn run dev

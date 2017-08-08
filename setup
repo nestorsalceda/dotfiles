@@ -1,10 +1,10 @@
 #!/bin/zsh
 
 function create_symlinks {
-	symlinks=(vimrc gvimrc gitconfig hgrc tmux.conf agignore gemrc editorconfig)
+	symlinks=(vimrc gvimrc gitconfig hgrc tmux.conf agignore gemrc editorconfig tmuxinator)
 	for symlink in $symlinks; do
 		echo "Creating symlink to ~/.$symlink"
-		ln -sf $PWD/$symlink ~/.$symlink
+		ln -sTf $PWD/$symlink ~/.$symlink
 	done
 }
 

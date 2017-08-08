@@ -1,0 +1,12 @@
+# ~/.tmuxinator/outbound-frontend-work.yml
+
+name: outbound-frontend-work
+root: ~/Projects/codingstones/peertransfer/outbound-frontend
+
+windows:
+  - editor:
+      panes:
+        - editor:
+          - nvm use
+          - cd src
+          - vim

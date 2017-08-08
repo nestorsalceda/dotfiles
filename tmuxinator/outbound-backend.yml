@@ -1,0 +1,40 @@
+# ~/.tmuxinator/outbound-backend-tests.yml
+
+name: outbound-backend-tests
+root: ~/Projects/codingstones/peertransfer/outbound-backend
+
+windows:
+  - tests:
+      layout: even-vertical
+      panes:
+        - outbound-tests:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rspec --format progress --no-profile; done
+        - http-tests:
+          - cd http-api
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rspec --format progress --no-profile; done
+
+  - acceptance:
+      panes:
+        - cucumber-tests:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec cucumber; done
+
+  - services:
+      panes:
+        - http-server:
+          - cd http-api
+          - while true; do sleep 1 && ag -l | entr -cdr bundle exec rackup -p 4567; done
+        - worker:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec ruby ./bin/worker.rb; done
+
+  - conventions:
+      layout: even-vertical
+      panes:
+        - outbound:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rubocop -DE; done
+        - http-api:
+          - cd http-api
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rubocop -DE; done
