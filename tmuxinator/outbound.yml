@@ -1,0 +1,55 @@
+# ~/.tmuxinator/outbound.yml
+
+name: outbound
+root: ~/Projects/codingstones/peertransfer
+
+windows:
+  - backend-tests:
+      root: ~/Projects/codingstones/peertransfer/outbound-backend
+      panes:
+        - outbound-tests:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rspec --format progress --no-profile; done
+        - http-tests:
+          - cd http-api
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rspec --format progress --no-profile; done
+
+  - backend-acceptance:
+      root: ~/Projects/codingstones/peertransfer/outbound-backend
+      panes:
+        - cucumber-tests:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec cucumber; done
+
+  - backend-conventions:
+      root: ~/Projects/codingstones/peertransfer/outbound-backend
+      panes:
+        - outbound:
+          - cd outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rubocop -DE; done
+        - http-api:
+          - cd http-api
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec rubocop -DE; done
+
+  - frontend-tests:
+      root: ~/Projects/codingstones/peertransfer/outbound-frontend
+      panes:
+        - unit:
+          - nvm use
+          - while true; do sleep 1 && ag -l | entr -c yarn run unit; done
+        - avoriaz:
+          - nvm use
+          - while true; do sleep 1 && ag -l | entr -c yarn run avoriaz; done
+
+  - services:
+      panes:
+        - http-api-server:
+          - cd outbound-backend/http-api
+          - while true; do sleep 1 && ag -l | entr -cdr bundle exec rackup -p 4567; done
+        - frontend-server:
+          - cd outbound-frontend/
+          - nvm use
+          - yarn run local
+        - backend-worker:
+          - cd outbound-backend/outbound
+          - while true; do sleep 1 && ag -l | entr -cd bundle exec ruby ./bin/worker.rb; done
