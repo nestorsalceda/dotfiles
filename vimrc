@@ -30,7 +30,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'terryma/vim-expand-region'
 
-
 if has('nvim')
   Plug 'neomake/neomake'
 else
@@ -41,17 +40,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
 Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go', 'javascript'] }
 
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'klen/python-mode', { 'for': 'python' }
-Plug 'slim-template/vim-slim', { 'for': 'slim' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-let g:go_fmt_command = "goimports"
-Plug 'chase/vim-ansible-yaml', { 'for': 'ansible' }
-Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
-Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'sheerun/vim-polyglot'
 "Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
