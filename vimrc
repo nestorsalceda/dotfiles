@@ -18,6 +18,8 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
+
+Plug 'wellle/targets.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'kana/vim-textobj-user'
 Plug 'vim-scripts/argtextobj.vim'
