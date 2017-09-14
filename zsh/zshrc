@@ -22,7 +22,7 @@ eval "$(direnv hook zsh)"
 [ -z "$TMUX" ] && export TERM="xterm-256color"
 export EDITOR="vim"
 export VISUAL="vim"
-export GOPATH=~/.go-workspace
+export GOPATH=~/Projects/golang
 
 alias fuck='sudo $(fc -l -n -1)'
 alias gst='git status -sb'
