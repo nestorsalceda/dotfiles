@@ -91,6 +91,7 @@ nmap <silent> <leader>rn :TestNearest<CR>
 nmap <silent> <leader>ra :TestSuite<CR>
 nmap <silent> <leader>rl :TestLast<CR>
 nmap <silent> <leader>rg :TestVisit<CR>
+let test#go#runner = 'gotest'
 
 let g:pymode_warnings = 0
 let g:pymode_folding = 0
