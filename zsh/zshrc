@@ -23,6 +23,7 @@ eval "$(direnv hook zsh)"
 export EDITOR="vim"
 export VISUAL="vim"
 export GOPATH=~/Projects/golang
+export PATH=$GOPATH/bin:$PATH
 
 alias fuck='sudo $(fc -l -n -1)'
 alias gst='git status -sb'
