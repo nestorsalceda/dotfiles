@@ -42,7 +42,8 @@ zstyle ':prezto:load' pmodule \
   'node' \
   'tmux' \
   'ssh' \
-  'fasd'
+  'fasd' \
+  'autosuggestions'
 
 #
 # Editor
