@@ -30,11 +30,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'terryma/vim-expand-region'
 
-if has('nvim')
-  Plug 'neomake/neomake'
-else
-  Plug 'scrooloose/syntastic'
-endif
+Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 
 Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
@@ -69,13 +65,16 @@ map <C-x> :NERDTreeToggle<CR>
 
 nmap <leader>e :FZF<CR>
 
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=0
 
-if has('nvim')
-  "let g:neomake_highlight_lines=1
-  autocmd! BufWritePost,BufEnter * Neomake
-endif
+highlight ALEErrorSign ctermbg=18 ctermfg=1
+highlight ALEError ctermfg=1 cterm=underline
+highlight ALEWarning ctermfg=3 cterm=underline
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+let g:ale_sign_offset = 1000000
+let g:ale_sign_column_always = 1
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:airline#extensions#ale#enabled = 1
 
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
