@@ -28,6 +28,7 @@ Plug 'nelstrom/vim-textobj-rubyblock', { 'for': 'ruby' }
 
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
+Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'terryma/vim-expand-region'
 
 Plug 'w0rp/ale'
@@ -45,6 +46,9 @@ call plug#end()
 
 let mapleader=","
 
+set background=dark
+colorscheme solarized
+highlight clear SignColumn
 set colorcolumn=80
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
@@ -65,6 +69,8 @@ map <C-x> :NERDTreeToggle<CR>
 
 nmap <leader>e :FZF<CR>
 
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=0
 
 highlight ALEErrorSign ctermbg=18 ctermfg=1
 highlight ALEError ctermfg=1 cterm=underline
