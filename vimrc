@@ -46,8 +46,6 @@ call plug#end()
 
 let mapleader=","
 
-set background=dark
-colorscheme solarized
 highlight clear SignColumn
 set colorcolumn=80
 if filereadable(expand("~/.vimrc_background"))
