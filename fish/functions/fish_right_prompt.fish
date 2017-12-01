@@ -57,7 +57,13 @@ function fish_right_prompt --description 'Write out the prompt'
     set -g __fish_git_prompt_color_cleanstate green --bold
   end
 
-  printf '%s' (__fish_vcs_prompt)
+  set -l ruby_version (__ruby_version)
+  if [ $ruby_version != "" ]
+    set_color red
+    printf ' %s ' $ruby_version
+    set_color normal
+  end
 
+  printf '%s' (__fish_vcs_prompt)
   set_color normal
 end
