@@ -61,9 +61,14 @@ function fish_right_prompt --description 'Write out the prompt'
   if [ $ruby_version != "" ]
     set_color red
     printf ' %s ' $ruby_version
-    set_color normal
   end
 
+  if test -f .nvmrc
+    set_color green
+    printf '⬢ %s ' $nvmrc_node_version
+  end
+
+  set_color normal
   printf '%s' (__fish_vcs_prompt)
   set_color normal
 end
