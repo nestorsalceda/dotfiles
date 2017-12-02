@@ -26,7 +26,7 @@ function fish_prompt
     case default
       set_color --bold red
     case insert
-      set_color --bold green
+      set_color --bold normal
     case replace_one
       set_color --bold green
     case visual
