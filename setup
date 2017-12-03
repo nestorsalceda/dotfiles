@@ -63,8 +63,8 @@ function configure_fish {
 }
 
 create_symlinks
+configure_fish
+install_or_upgrade_prezto
 configure_base16
 configure_vim
-install_or_upgrade_prezto
 configure_neovim
-configure_fish
