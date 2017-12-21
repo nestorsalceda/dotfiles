@@ -109,6 +109,7 @@ set number
 set showmatch
 set wildignore+=*.pyc,node_modules,*.egg-info
 set wildmode=list:longest
+set nofoldenable
 
 imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null
