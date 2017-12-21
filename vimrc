@@ -37,7 +37,6 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
 Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go', 'javascript'] }
 
-Plug 'sheerun/vim-polyglot'
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'fatih/vim-go', { 'for': 'go' }
