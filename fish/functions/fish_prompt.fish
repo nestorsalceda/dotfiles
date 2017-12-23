@@ -12,6 +12,9 @@ function fish_prompt
   set_color normal
   printf ' in '
 
+  if not set -q fish_prompt_pwd_dir_length
+    set -g fish_prompt_pwd_dir_length 0
+  end
   set_color $fish_color_cwd
   printf ' %s' (prompt_pwd)
   set_color normal
