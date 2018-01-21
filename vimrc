@@ -41,6 +41,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
+Plug 'posva/vim-vue'
 "Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
