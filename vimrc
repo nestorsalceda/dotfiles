@@ -1,8 +1,6 @@
 " Plug
 call plug#begin()
-if !has('nvim')
-  Plug 'tpope/vim-sensible'
-endif
+Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -85,11 +83,7 @@ let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 nmap <leader>t :TagbarToggle<CR>
 
-if has('nvim')
-  let test#strategy = 'neovim'
-else
-  let test#strategy = 'dispatch'
-end
+let test#strategy = 'dispatch'
 nmap <silent> <leader>rt :TestFile<CR>
 nmap <silent> <leader>rn :TestNearest<CR>
 nmap <silent> <leader>ra :TestSuite<CR>

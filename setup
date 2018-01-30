@@ -47,14 +47,6 @@ function create_prezto_symlinks {
 	done
 }
 
-function configure_neovim {
-	mkdir -p ~/.config/nvim
-	ln -sf $PWD/vimrc ~/.config/nvim/init.vim
-
-	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	nvim -c "PlugUpdate!" -c ":q!" -c ":q!"
-}
-
 function configure_base16 {
 	clone_or_upgrade_repository https://github.com/chriskempson/base16-shell.git /home/nestor/.config/base16-shell
 }
@@ -68,4 +60,3 @@ configure_fish
 install_or_upgrade_prezto
 configure_base16
 configure_vim
-configure_neovim
