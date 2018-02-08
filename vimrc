@@ -41,6 +41,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 "Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
@@ -97,6 +98,8 @@ let g:pymode_folding = 0
 let g:pymode_lint = 0
 let g:pymode_breakpoint = 0
 let g:pymode_rope = 0
+
+let g:terraform_align = 1
 
 set hlsearch
 set list
