@@ -1,6 +1,7 @@
 " Plug
 call plug#begin()
 Plug 'tpope/vim-sensible'
+Plug 'wincent/terminus'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
