@@ -48,6 +48,8 @@ call plug#end()
 
 let mapleader=","
 
+let g:TerminusFocusReporting=0
+
 highlight clear SignColumn
 set colorcolumn=80
 if filereadable(expand("~/.vimrc_background"))
