@@ -113,6 +113,8 @@ set wildignore+=*.pyc,node_modules,*.egg-info
 set wildmode=list:longest
 set nofoldenable
 
+set cursorline
+
 imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null
 
