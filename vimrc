@@ -118,6 +118,10 @@ set cursorline
 imap jj <Esc>
 cmap w!! w !sudo tee % >/dev/null
 
+set directory^=~/.vim/recover
+set undofile
+set undodir=~/.vim/undodir
+
 set clipboard=unnamed
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
