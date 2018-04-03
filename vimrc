@@ -33,7 +33,6 @@ Plug 'terryma/vim-expand-region'
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
 
-Plug 'tpope/vim-dispatch', { 'on': ['Dispatch', 'Make'] }
 Plug 'janko-m/vim-test', { 'for': ['ruby', 'python', 'go', 'javascript'] }
 
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -88,7 +87,7 @@ let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 nmap <leader>t :TagbarToggle<CR>
 
-let test#strategy = 'dispatch'
+let test#strategy = 'vimterminal'
 nmap <silent> <leader>rt :TestFile<CR>
 nmap <silent> <leader>rn :TestNearest<CR>
 nmap <silent> <leader>ra :TestSuite<CR>
