@@ -1,4 +1,4 @@
-set fish_color_autosuggestion brblack
+set fish_color_autosuggestion white --dim
 set fish_color_cancel
 set fish_color_command blue
 set fish_color_comment brblack
