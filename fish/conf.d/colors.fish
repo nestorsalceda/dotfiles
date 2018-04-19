@@ -15,7 +15,7 @@ set fish_color_operator white --bold
 set fish_color_param cyan
 set fish_color_quote yellow
 set fish_color_redirection white --bold
-set fish_color_search_match --background=yellow
+set fish_color_search_match --background=white
 set fish_color_selection
 set fish_color_status
 set fish_color_user yellow
