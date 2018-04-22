@@ -76,6 +76,7 @@ let g:syntastic_enable_signs=0
 highlight ALEErrorSign ctermbg=18 ctermfg=1
 highlight ALEError ctermfg=1 cterm=underline
 highlight ALEWarning ctermfg=3 cterm=underline
+let g:ale_echo_cursor = 0
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 let g:ale_sign_offset = 1000000
