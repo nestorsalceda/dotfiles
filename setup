@@ -1,64 +1,15 @@
-#!/bin/zsh
+#!/bin/sh
 
-function create_symlinks {
-	symlinks=(vimrc gvimrc gitconfig hgrc tmux.conf agignore gemrc editorconfig tmuxinator)
-	for symlink in $symlinks; do
-		echo "Creating symlink to ~/.$symlink"
-		ln -sTf $PWD/$symlink ~/.$symlink
+install_vim_plug() {
+  curl -fLo ./vim/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
+
+create_symlinks() {
+	for symlink in ag base16-shell editorconfig fish git mercurial tmux tmuxinator vim
+	do
+		stow -t /home/nestor $symlink
 	done
 }
 
-function clone_or_upgrade_repository {
-	repository=$1
-	destination=$2
-	if [[ ! -d $destination ]]; then
-		git clone --recursive $repository $destination
-	else
-		pushd $destination
-		git pull --recurse-submodules
-		popd
-	fi
-}
-
-function configure_vim {
-	mkdir -p ~/.vim/recover
-	mkdir -p ~/.vim/undodir
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-	vim -c "PlugUpdate!" -c ":q!" -c ":q!"
-}
-
-function install_or_upgrade_prezto {
-	zprezto_dir=~/.zprezto
-	clone_or_upgrade_repository https://github.com/sorin-ionescu/prezto.git $zprezto_dir
-	create_prezto_symlinks
-	echo "Creating symlink to ~/.zshrc"
-	ln -sf $PWD/zsh/zshrc ~/.zshrc
-	echo "Creating symlink to ~/.zpreztorc"
-	ln -sf $PWD/zsh/zpreztorc ~/.zpreztorc
-	echo "Creating symlink to $zprezto_dir/modules/prompt/functions/prompt_nestorsalceda_setup"
-	ln -sf $PWD/zsh/prompt_nestorsalceda_setup $zprezto_dir/modules/prompt/functions/prompt_nestorsalceda_setup
-	echo "Creating symlink to $zprezto_dir/modules/base16"
-	ln -sTf $PWD/zsh/modules/base16 $zprezto_dir/modules/base16
-}
-
-function create_prezto_symlinks {
-	setopt EXTENDED_GLOB
-	for rcfile in ~/.zprezto/runcoms/^README.md(.N); do
-		ln -sf $rcfile ~/.${rcfile:t}
-	done
-}
-
-function configure_base16 {
-	clone_or_upgrade_repository https://github.com/chriskempson/base16-shell.git /home/nestor/.config/base16-shell
-}
-
-function configure_fish {
-	ln -sTf $PWD/fish ~/.config/fish
-}
-
+install_vim_plug
 create_symlinks
-configure_fish
-install_or_upgrade_prezto
-configure_base16
-configure_vim
