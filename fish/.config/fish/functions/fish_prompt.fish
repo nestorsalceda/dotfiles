@@ -1,15 +1,15 @@
 function fish_prompt
-  if not set -q VIRTUAL_ENV_DISABLE_PROMPT
-    set -g VIRTUAL_ENV_DISABLE_PROMPT true
-  end
+  #if not set -q VIRTUAL_ENV_DISABLE_PROMPT
+  #  set -g VIRTUAL_ENV_DISABLE_PROMPT true
+  #end
   set_color $fish_color_user
   printf '%s' (whoami)
-  set_color normal
+  set_color white --bold
   printf ' at '
 
   set_color $fish_color_host
   echo -n (prompt_hostname)
-  set_color normal
+  set_color white --bold
   printf ' in '
 
   if not set -q fish_prompt_pwd_dir_length
@@ -21,9 +21,9 @@ function fish_prompt
 
   # Line 2
   echo
-  if test $VIRTUAL_ENV
-    printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
-  end
+  #if test $VIRTUAL_ENV
+  #  printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
+  #end
 
   switch $fish_bind_mode
     case default
