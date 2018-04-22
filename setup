@@ -5,7 +5,7 @@ install_vim_plug() {
 }
 
 create_symlinks() {
-	for symlink in ag base16-shell editorconfig fish git mercurial tmux tmuxinator vim
+	for symlink in ag base16 editorconfig fish git mercurial tmux tmuxinator vim
 	do
 		stow -t /home/nestor $symlink
 	done
