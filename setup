@@ -3,7 +3,7 @@
 create_symlinks() {
   for symlink in ag base16 editorconfig fish git mercurial tmux tmuxinator vim ruby
   do
-    stow -t /home/nestor $symlink
+    stow -v -t $HOME $symlink
   done
 }
 
