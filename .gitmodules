@@ -1,3 +1,6 @@
 [submodule "base16/.config/base16-shell"]
 	path = base16/.config/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
+[submodule "vim/.vim/vim-plug"]
+	path = vim/.vim/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
