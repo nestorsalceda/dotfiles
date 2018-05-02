@@ -101,6 +101,8 @@ let g:pymode_lint = 0
 let g:pymode_breakpoint = 0
 let g:pymode_rope = 0
 
+let g:go_fmt_fail_silently = 1
+
 let g:terraform_align = 1
 
 set hlsearch
