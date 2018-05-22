@@ -12,3 +12,6 @@ Session.vim
 *~
 # Auto-generated tag files
 tags
+
+# Direnv stuff
+.envrc
