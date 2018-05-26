@@ -29,6 +29,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'terryma/vim-expand-region'
+Plug 'godlygeek/tabular', { 'on': ['Tab', 'Tabular'] }
 
 Plug 'w0rp/ale'
 Plug 'majutsushi/tagbar'
