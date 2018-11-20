@@ -4,7 +4,7 @@ fi
 
 SPACESHIP_PROMPT_ORDER=(
   #vi_mode       # Vi-mode indicator
-    user          # Username section
+  user          # Username section
   dir           # Current directory section
   host          # Hostname section
   exec_time     # Execution time
@@ -25,7 +25,6 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_CHAR_SYMBOL="$ "
 SPACESHIP_CHAR_COLOR_SUCCESS=white
 
-SPACESHIP_DIR_PREFIX="foo"
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_COLOR=blue
