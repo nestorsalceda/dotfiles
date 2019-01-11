@@ -1,4 +1,4 @@
-fpath=($PWD/.zsh/zsh-completions/src $fpath)
+fpath=($HOME/.zsh/zsh-completions/src $fpath)
 autoload -Uz compinit
 compinit
 

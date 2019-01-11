@@ -1,7 +1,8 @@
-source $PWD/.zsh/prompt.zsh
-source $PWD/.zsh/history.zsh
-source $PWD/.zsh/completion.zsh
-source $PWD/.zsh/alias.zsh
+source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/path.zsh
+source $HOME/.zsh/history.zsh
+source $HOME/.zsh/completion.zsh
+source $HOME/.zsh/alias.zsh
 
 stty -ixon
 
@@ -12,9 +13,9 @@ eval "$(dircolors -b)"
 eval "$(direnv hook zsh)"
 eval "$(fasd --init auto)"
 
-source $PWD/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $PWD/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $PWD/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 bindkey '\eOA' history-substring-search-up
 bindkey '\eOB' history-substring-search-down

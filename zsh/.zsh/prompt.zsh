@@ -1,5 +1,5 @@
-if [[ -n $PWD/.zsh/spaceship-prompt/prompt_spaceship_setup ]]; then
-  ln -sf spaceship.zsh $PWD/.zsh/spaceship-prompt/prompt_spaceship_setup
+if [[ -n $HOME/.zsh/spaceship-prompt/prompt_spaceship_setup ]]; then
+  ln -sf spaceship.zsh $HOME/.zsh/spaceship-prompt/prompt_spaceship_setup
 fi
 
 SPACESHIP_PROMPT_ORDER=(
