@@ -19,3 +19,6 @@
 [submodule "konsole/.local/share/konsole"]
 	path = konsole/.local/share/konsole
 	url = https://github.com/dracula/konsole.git
+[submodule "konsole-dracula/.local/share/konsole"]
+	path = konsole-dracula/.local/share/konsole
+	url = https://github.com/dracula/konsole.git
