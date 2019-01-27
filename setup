@@ -1,10 +1,6 @@
 #!/bin/sh
 
-create_symlinks() {
-  for symlink in ag editorconfig fish git mercurial tmux vim ruby zsh konsole-dracula konsole
-  do
-    stow -v -t $HOME $symlink
-  done
-}
-
-create_symlinks
+for symlink in ag editorconfig fish git mercurial tmux vim ruby zsh konsole-dracula konsole
+do
+  stow -v -t $HOME $symlink
+done
