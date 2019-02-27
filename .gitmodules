@@ -16,9 +16,6 @@
 [submodule "zsh/.zsh/zsh-history-substring-search"]
 	path = zsh/.zsh/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
-[submodule "konsole-dracula/.local/share/konsole"]
-	path = konsole-dracula/.local/share/konsole
-	url = https://github.com/dracula/konsole.git
 [submodule "base16/.config/base16-shell"]
 	path = base16/.config/base16-shell
 	url = https://github.com/chriskempson/base16-shell.git
