@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for symlink in ag editorconfig fish git mercurial tmux vim ruby zsh konsole-dracula konsole
+for symlink in ag editorconfig fish git mercurial tmux vim ruby zsh base16
 do
   stow -v -t $HOME $symlink
 done

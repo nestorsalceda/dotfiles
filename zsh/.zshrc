@@ -8,7 +8,8 @@ stty -ixon
 
 bindkey -v
 
-eval "$(dircolors -b)"
+source ~/.config/base16-shell/base16-shell.plugin.zsh
+#eval "$(dircolors -b)"
 eval "$(direnv hook zsh)"
 eval "$(fasd --init auto)"
 

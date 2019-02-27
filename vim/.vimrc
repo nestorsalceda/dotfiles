@@ -2,7 +2,7 @@
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'wincent/terminus'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
@@ -51,18 +51,14 @@ let mapleader=","
 let g:TerminusFocusReporting=0
 
 set colorcolumn=80
-
-set termguicolors
-if &term =~# '^screen'
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
 endif
-colorscheme dracula
 
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_theme='dracula'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_symbols.branch = '⎇'
