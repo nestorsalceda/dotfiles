@@ -43,6 +43,8 @@ Plug 'pearofducks/ansible-vim', { 'for': 'ansible' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'posva/vim-vue', { 'for': 'vue' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+Plug 'vim-scripts/bats.vim', { 'for': 'bats' }
+
 "Plug 'edkolev/tmuxline.vim'
 call plug#end()
 
