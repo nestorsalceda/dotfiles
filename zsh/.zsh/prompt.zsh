@@ -2,6 +2,8 @@ if [[ -n $HOME/.zsh/spaceship-prompt/prompt_spaceship_setup ]]; then
   ln -sf spaceship.zsh $HOME/.zsh/spaceship-prompt/prompt_spaceship_setup
 fi
 
+SPACESHIP_ROOT=$HOME/.zsh/spaceship-prompt
+
 SPACESHIP_PROMPT_ORDER=(
   #vi_mode       # Vi-mode indicator
   user          # Username section
