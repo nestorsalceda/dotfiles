@@ -16,6 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'wellle/targets.vim'
