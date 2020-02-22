@@ -1,1 +1,0 @@
-/home/nestor/.fzf/shell/key-bindings.fish

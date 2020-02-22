@@ -8,8 +8,7 @@ stty -ixon
 
 bindkey -v
 
-source ~/.config/base16-shell/base16-shell.plugin.zsh
-eval "$(dircolors -b)"
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 eval "$(direnv hook zsh)"
 eval "$(fasd --init auto)"
 
@@ -24,3 +23,5 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

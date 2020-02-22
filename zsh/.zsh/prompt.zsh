@@ -12,7 +12,7 @@ SPACESHIP_PROMPT_ORDER=(
   exec_time     # Execution time
   line_sep      # Line break
   jobs          # Background jobs indicator
-  #exit_code     # Exit code section
+  exit_code     # Exit code section
   char          # Prompt character
 )
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for symlink in ag editorconfig fish git mercurial tmux vim ruby zsh base16
+for symlink in ag editorconfig git mercurial tmux vim ruby zsh
 do
   stow -v -t $HOME $symlink
 done
