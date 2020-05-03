@@ -9,7 +9,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
+Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'wincent/ferret', { 'on': ['Ack', 'Acks'] }
 
 Plug 'tpope/vim-fugitive'
