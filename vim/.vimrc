@@ -61,7 +61,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_powerline_fonts = 1
 
-let NERDTreeIgnore=['\.pyc$', '\.orig$']
+let NERDTreeIgnore=['\.pyc$', '\.orig$', '__pycache__']
 map <C-x> :NERDTreeToggle<CR>
 
 nmap <leader>e :FZF<CR>
