@@ -10,7 +10,7 @@ bindkey -v
 
 test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
 eval "$(direnv hook zsh)"
-eval "$(fasd --init auto)"
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
