@@ -74,6 +74,8 @@ let g:ale_sign_warning = '⚠'
 let g:ale_sign_offset = 1000000
 let g:ale_sign_column_always = 1
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_linters = {'go': ['golangci-lint']}
+let g:ale_go_golangci_lint_options = ''
 let g:airline#extensions#ale#enabled = 1
 
 let g:tagbar_compact = 1
