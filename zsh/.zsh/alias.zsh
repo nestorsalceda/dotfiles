@@ -1,4 +1,4 @@
-alias ls='ls --color'
+alias ls='exa'
 
 alias gst='git status'
 
