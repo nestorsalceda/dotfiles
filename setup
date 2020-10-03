@@ -2,7 +2,7 @@
 
 wget https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -O ~/.dir_colors
 
-for symlink in ag editorconfig git mercurial tmux vim ruby zsh
+for symlink in ag editorconfig git mercurial tmux vim ruby zsh alacritty
 do
   stow -v -t "$HOME" "$symlink"
 done
