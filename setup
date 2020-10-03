@@ -4,5 +4,5 @@ wget https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/sr
 
 for symlink in ag editorconfig git mercurial tmux vim ruby zsh
 do
-  stow -v -t $HOME $symlink
+  stow -v -t "$HOME" "$symlink"
 done
