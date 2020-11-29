@@ -1,3 +1,5 @@
+source $HOME/.zsh/base16-shell/base16-shell.plugin.zsh
+
 source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/path.zsh
 source $HOME/.zsh/history.zsh
@@ -9,7 +11,7 @@ stty -ixon
 bindkey -v
 export EDITOR=vim
 
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+[ -f "$HOME/.dir_colors" ] && eval $(dircolors $HOME/.dir_colors)
 eval "$(direnv hook zsh)"
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 

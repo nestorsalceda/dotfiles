@@ -2,7 +2,7 @@
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'wincent/terminus'
-Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sleuth'
@@ -59,7 +59,11 @@ if exists('+termguicolors') && $TERM ==# 'screen-256color'
   set termguicolors
 endif
 
-colorscheme nord
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 set colorcolumn=80
 
 if !exists('g:airline_symbols')
