@@ -76,6 +76,10 @@ map <C-x> :NERDTreeToggle<CR>
 
 nmap <leader>e :FZF<CR>
 
+highlight ALEErrorSign ctermbg=18 ctermfg=1
+highlight ALEError ctermfg=1 cterm=underline
+highlight ALEWarning ctermfg=3 cterm=underline
+
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 let g:ale_sign_offset = 1000000
