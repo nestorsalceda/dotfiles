@@ -6,3 +6,4 @@ fi
 
 alias gst='git status'
 alias k='kubectl'
+alias vim='nvim'

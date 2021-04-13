@@ -7,7 +7,8 @@ source $HOME/.zsh/alias.zsh
 stty -ixon
 
 bindkey -v
-export EDITOR=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 [ -f "$HOME/.dir_colors" ] && eval $(dircolors $HOME/.dir_colors)
 eval "$(direnv hook zsh)"
