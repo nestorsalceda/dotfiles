@@ -1,5 +1,3 @@
-source $HOME/.zsh/base16-shell/base16-shell.plugin.zsh
-
 source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/path.zsh
 source $HOME/.zsh/history.zsh
