@@ -2,3 +2,6 @@ vim/.vim/undodir/
 vim/.vim/recover/
 vim/.vim/plugged/
 tmux/.tmux/plugins/
+nvim/.config/nvim/undodir/
+nvim/.config/nvim/recover/
+nvim/.config/nvim/plugged/
