@@ -1,17 +1,20 @@
+emulate zsh -c "$(direnv export zsh)"
+
+stty -ixon
+
 source $HOME/.zsh/prompt.zsh
 source $HOME/.zsh/path.zsh
 source $HOME/.zsh/history.zsh
 source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/alias.zsh
 
-stty -ixon
 
 bindkey -v
 export EDITOR=nvim
 export VISUAL=nvim
 
 [ -f "$HOME/.dir_colors" ] && eval $(dircolors $HOME/.dir_colors)
-eval "$(direnv hook zsh)"
+emulate zsh -c "$(direnv hook zsh)"
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

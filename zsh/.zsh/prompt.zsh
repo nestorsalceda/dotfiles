@@ -1,37 +1,11 @@
-if [[ -n $HOME/.zsh/spaceship-prompt/prompt_spaceship_setup ]]; then
-  ln -sf spaceship.zsh $HOME/.zsh/spaceship-prompt/prompt_spaceship_setup
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-SPACESHIP_ROOT=$HOME/.zsh/spaceship-prompt
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-SPACESHIP_PROMPT_ORDER=(
-  #vi_mode       # Vi-mode indicator
-  user          # Username section
-  dir           # Current directory section
-  host          # Hostname section
-  exec_time     # Execution time
-  line_sep      # Line break
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-
-SPACESHIP_RPROMPT_ORDER=(
-  git           # Git section (git_branch + git_status)
-  #venv          # virtualenv section
-  #kubecontext   # Kubectl context section
-)
-
-SPACESHIP_PROMPT_ADD_NEWLINE=false
-
-SPACESHIP_CHAR_SYMBOL="$ "
-SPACESHIP_CHAR_COLOR_SUCCESS=default
-
-SPACESHIP_DIR_TRUNC=0
-SPACESHIP_DIR_TRUNC_REPO=false
-SPACESHIP_DIR_COLOR=blue
-
-fpath=("$HOME/.zsh/spaceship-prompt" $fpath)
-autoload -Uz promptinit
-promptinit
-prompt spaceship
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
