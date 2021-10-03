@@ -117,7 +117,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'gopls' }
+local servers = { 'gopls', 'jsonls', 'yamlls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -126,6 +126,10 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+require'lspconfig'.jsonls.setup {
+  cmd = { "vscode-json-languageserver", "--stdio" }
+}
 
 require('nvim-treesitter.configs').setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
