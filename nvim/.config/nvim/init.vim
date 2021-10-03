@@ -23,7 +23,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
 
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'godlygeek/tabular', { 'on': ['Tab', 'Tabular'] }
 Plug 'simrat39/symbols-outline.nvim'
@@ -184,6 +184,8 @@ function goimports(timeout_ms)
     vim.lsp.buf.execute_command(action)
   end
 end
+
+require('gitsigns').setup()
 EOF
 
 autocmd BufWritePre *.go lua goimports(1000)
