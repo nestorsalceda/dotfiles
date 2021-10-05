@@ -19,10 +19,10 @@ Plug 'ryanoasis/vim-devicons'
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
-
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf.vim'
+
+Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'godlygeek/tabular', { 'on': ['Tab', 'Tabular'] }
@@ -44,7 +44,7 @@ let g:airline_powerline_fonts = 1
 let NERDTreeIgnore=['\.pyc$', '\.orig$', '__pycache__', '\.git$']
 map <C-x> :NERDTreeToggle<CR>
 
-nnoremap <leader>e :Telescope find_files<cr>
+nnoremap <leader>e :GFiles<CR>
 
 nmap <leader>t :SymbolsOutline<CR>
 
