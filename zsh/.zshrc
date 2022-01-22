@@ -15,7 +15,7 @@ export VISUAL=nvim
 
 [ -f "$HOME/.dir_colors" ] && eval $(dircolors $HOME/.dir_colors)
 emulate zsh -c "$(direnv hook zsh)"
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+eval "$(zoxide init zsh)"
 
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
