@@ -1,8 +1,25 @@
 #!/bin/sh
 
-wget https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors -O ~/.dir_colors
+
+setup_gnome() {
+  dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Super>1']"
+  dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Super>2']"
+  dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-3 "['<Super>3']"
+  dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-4 "['<Super>4']"
+  dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-5 "['<Super>5']"
+  dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-6 "['<Super>6']"
+
+  #dconf write /org/gnome/desktop/wm/preferences/num-workspaces "6"
+  dconf write /org/gnome/desktop/wm/preferences/workspace-names "['Web','Terminal','Communications','Email','Spotify','Zoom']"
+
+  dconf write /org/gnome/shell/extensions/auto-move-windows/application-list "['firefox.desktop:1','org.gnome.Terminal.desktop:2','slack.desktop:3','org.gnome.Evolution.desktop:4','spotify.desktop:5','Zoom.desktop:6']"
+}
+
+wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark -O ~/.dir_colors
 
 for symlink in ag editorconfig git mercurial tmux vim nvim ruby zsh alacritty
 do
   stow -v -t "$HOME" "$symlink"
 done
+
+setup_gnome
