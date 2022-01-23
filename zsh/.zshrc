@@ -7,7 +7,7 @@ source $HOME/.zsh/path.zsh
 source $HOME/.zsh/history.zsh
 source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/alias.zsh
-
+source /etc/profile.d/vte.sh
 
 bindkey -v
 export EDITOR=nvim
