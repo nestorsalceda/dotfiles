@@ -8,8 +8,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'nestorsalceda/vim-strip-trailing-whitespaces'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-Plug 'nvim-treesitter/nvim-treesitter', { 'branch' : '0.5-compat', 'do': ':TSUpdate' }
-Plug 'nvim-treesitter/nvim-treesitter-textobjects', {'branch' : '0.5-compat'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 Plug 'neovim/nvim-lspconfig'
 
