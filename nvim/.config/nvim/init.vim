@@ -44,7 +44,8 @@ let g:airline_powerline_fonts = 1
 let NERDTreeIgnore=['\.pyc$', '\.orig$', '__pycache__', '\.git$']
 map <C-x> :NERDTreeToggle<CR>
 
-nnoremap <leader>e :GFiles<CR>
+nnoremap <leader>e :Files<CR>
+nnoremap <leader>b :Buffers<CR>
 
 nmap <leader>t :SymbolsOutline<CR>
 
