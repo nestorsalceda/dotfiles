@@ -17,7 +17,7 @@ setup_gnome() {
 
 wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark -O ~/.dir_colors
 
-for symlink in ag editorconfig git mercurial tmux vim nvim ruby zsh alacritty
+for symlink in ag editorconfig git mercurial tmux vim nvim ruby zsh alacritty kitty
 do
   stow -v -t "$HOME" "$symlink"
 done
