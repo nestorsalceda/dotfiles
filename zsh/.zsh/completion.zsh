@@ -26,3 +26,7 @@ fi
 if [ $commands[kops] ]; then
   source <(kops completion zsh)
 fi
+
+if [ $commmands[chef] ]; then
+  source <(chef shell-init zsh)
+fi
