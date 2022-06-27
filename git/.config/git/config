@@ -2,7 +2,7 @@
 	name = Néstor Salceda
 	email = nestor.salceda@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 [color]
 	ui = true
 [merge]
