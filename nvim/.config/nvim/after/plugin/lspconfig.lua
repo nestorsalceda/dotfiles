@@ -51,3 +51,5 @@ local nvim_lsp = require('lspconfig')
 nvim_lsp.jsonls.setup {
   cmd = { "vscode-json-languageserver", "--stdio" }
 }
+
+require("symbols-outline").setup()
