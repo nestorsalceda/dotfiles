@@ -1,11 +1,20 @@
 theme = "dracula"
 
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "block"
+[editor]
+cursorline = true
+color-modes = true
 
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
