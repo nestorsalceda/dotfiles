@@ -2,7 +2,7 @@
 	name = Néstor Salceda
 	email = nestor.salceda@gmail.com
 [core]
-	editor = nvim
+	editor = helix
 [color]
 	ui = true
 [merge]
@@ -11,3 +11,9 @@
 	prompt = no
 [push]
 	default = current
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential

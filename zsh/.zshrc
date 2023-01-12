@@ -9,8 +9,8 @@ source $HOME/.zsh/completion.zsh
 source $HOME/.zsh/alias.zsh
 
 bindkey -v
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=helix
+export VISUAL=helix
 
 [ -f "$HOME/.dir_colors" ] && eval $(dircolors $HOME/.dir_colors)
 emulate zsh -c "$(direnv hook zsh)"
