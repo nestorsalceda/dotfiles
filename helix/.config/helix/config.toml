@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "catppuccin_mocha"
 
 [editor]
 cursorline = true
