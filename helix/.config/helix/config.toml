@@ -1,8 +1,9 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_latte"
 
 [editor]
 cursorline = true
 color-modes = true
+idle-timeout = 150
 
 [editor.statusline]
 left = ["mode", "spinner"]
@@ -18,3 +19,8 @@ display-messages = true
 
 [editor.cursor-shape]
 insert = "bar"
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "all"
