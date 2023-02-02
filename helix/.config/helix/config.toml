@@ -1,9 +1,11 @@
-theme = "catppuccin_latte"
+theme = "catppuccin_mocha"
 
 [editor]
 cursorline = true
 color-modes = true
 idle-timeout = 150
+rulers = [80,100]
+bufferline = "always"
 
 [editor.statusline]
 left = ["mode", "spinner"]
