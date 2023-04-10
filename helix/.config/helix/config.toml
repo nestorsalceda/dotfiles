@@ -9,8 +9,8 @@ bufferline = "always"
 auto-pairs = false
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["version-control", "file-name"]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
