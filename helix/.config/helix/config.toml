@@ -31,3 +31,6 @@ newline = "all"
 
 [editor.soft-wrap]
 enable = true
+
+[editor.indent-guides]
+render = true
