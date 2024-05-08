@@ -1,0 +1,6 @@
+[status]
+separator_open  = ""
+separator_close = ""
+
+[icon]
+rules = []
