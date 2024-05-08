@@ -1,5 +1,5 @@
-if [ $commands[exa] ]; then
-  alias ls='exa'
+if [ $commands[eza] ]; then
+  alias ls='eza'
 else
   alias ls='ls --color'
 fi
