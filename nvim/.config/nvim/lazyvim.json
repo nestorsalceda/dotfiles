@@ -1,0 +1,12 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.formatting.prettier",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.linting.eslint"
+  ],
+  "news": {
+    "NEWS.md": "6520"
+  },
+  "version": 6
+}
