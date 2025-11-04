@@ -1,6 +1,6 @@
 font-family = "JetBrains Mono"
 font-style = "Regular"
 font-size = 15
-theme = "TokyoNight Moon"
+theme = "dark:Catppuccin Mocha,light:Catppuccin Latte"
 gtk-titlebar = false
 unfocused-split-opacity = 0.9
