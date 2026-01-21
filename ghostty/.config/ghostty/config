@@ -1,6 +1,9 @@
 font-family = "JetBrains Mono"
 font-style = "Regular"
 font-size = 15
-theme = "dark:Catppuccin Mocha,light:Catppuccin Latte"
+theme = "light:Catppuccin Macchiato, dark:Catppuccin Mocha"
 gtk-titlebar = false
 unfocused-split-opacity = 0.9
+background-opacity = 0.99
+app-notifications = no-clipboard-copy
+window-theme = ghostty
