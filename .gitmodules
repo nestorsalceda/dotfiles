@@ -10,9 +10,6 @@
 [submodule "zsh/.zsh/zsh-completions"]
 	path = zsh/.zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
-[submodule "zsh/.zsh/spaceship-prompt"]
-	path = zsh/.zsh/spaceship-prompt
-	url = https://github.com/denysdovhan/spaceship-prompt.git
 [submodule "zsh/.zsh/zsh-history-substring-search"]
 	path = zsh/.zsh/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
