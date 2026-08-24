@@ -4,8 +4,8 @@ set -g fish_key_bindings fish_vi_key_bindings
 set -gx GOPATH $HOME/.go
 fish_add_path $GOPATH/bin $HOME/bin $HOME/.local/bin
 
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+set -U EDITOR nvim
+set -U VISUAL nvim
 
 if type -q eza
     alias ls eza
