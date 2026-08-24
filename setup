@@ -2,6 +2,6 @@
 
 # wget https://raw.githubusercontent.com/seebi/dircolors-solarized/master/dircolors.ansi-dark -O ~/.dir_colors
 
-for symlink in ag editorconfig git mercurial tmux vim nvim ruby zsh alacritty kitty helix yazi ghostty starship; do
+for symlink in ag editorconfig git mercurial tmux vim nvim ruby zsh alacritty kitty helix yazi ghostty starship fish; do
   stow -v -t "$HOME" "$symlink"
 done
