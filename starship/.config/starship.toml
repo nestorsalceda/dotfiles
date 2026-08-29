@@ -115,6 +115,7 @@ symbol = " "
 symbol = " "
 
 [battery]
+disabled = true
 full_symbol = "󰁹 "
 charging_symbol = "󰂄 "
 discharging_symbol = "󰂃 "
@@ -160,7 +161,7 @@ symbol = " "
 [directory]
 read_only = " 󰌾"
 style = "bold blue"
-truncation_length = 100
+truncation_length = 0
 truncate_to_repo = false
 
 [docker_context]
@@ -259,6 +260,7 @@ symbol = "󰈸 "
 symbol = " "
 
 [netns]
+disabled = true
 symbol = "󰛳 "
 
 [nim]
@@ -343,6 +345,7 @@ Windows = "󰍲 "
 Zorin = " "
 
 [package]
+disabled = true
 symbol = "󰏗 "
 
 [perl]
