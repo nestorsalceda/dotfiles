@@ -1,4 +1,4 @@
-set -U fish_greeting
+set -gx fish_greeting
 set -g fish_key_bindings fish_vi_key_bindings
 
 set -gx EDITOR nvim
